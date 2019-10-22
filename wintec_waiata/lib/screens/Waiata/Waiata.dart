@@ -17,7 +17,7 @@ class Waiata extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Text('Hello world'),
+          Text('Marae cards'),
           Text('Marae')
         ],
       ),
