@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:wintec_waiata/shared/ApplicationBar.dart';
 
-class Marae extends StatelessWidget {
+class WaiataHome extends StatelessWidget {
   
   var _title;
 
-  Marae(this._title);
+  WaiataHome(this._title);
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +17,8 @@ class Marae extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Text('Hello world'),
-          Text('Waiata')
+          Text('Marae cards'),
+          Text('Marae')
         ],
       ),
     );
