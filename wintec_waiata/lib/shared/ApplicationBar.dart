@@ -10,6 +10,7 @@ class ApplicationBar extends AppBar {
             //this needs to be a PopupMenuButton
             IconButton(
               icon: Icon(Icons.more_vert),
+              onPressed: (){},
             ),
             // PopupMenuButton(
             //   icon: Icon(Icons.more_vert),
