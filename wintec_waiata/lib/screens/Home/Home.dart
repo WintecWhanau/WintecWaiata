@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wintec_waiata/screens/WaiataHome/WaiataHome.dart';
 import 'package:wintec_waiata/screens/MaraeHome/MaraeHome.dart';
+import 'package:wintec_waiata/shared/Marae_icon.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -21,9 +22,11 @@ class _HomeState extends State<Home> {
   ];
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    setState(
+      () {
+        _selectedIndex = index;
+      },
+    );
   }
 
   @override
@@ -40,11 +43,13 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.music_note),
+            icon: Icon(Icons.library_music),
             title: Text('Waiata'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              MyIcon.squaremaraeblack_2_,
+            ),
             title: Text('Marae'),
           ),
         ],
