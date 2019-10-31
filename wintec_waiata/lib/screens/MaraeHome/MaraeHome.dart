@@ -16,7 +16,9 @@ class MaraeHome extends StatelessWidget {
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[Text('Hello world'), Text('Waiata')],
+        children: <Widget>[
+          Text('Marae card'), 
+          Text('Marae card')],
       ),
     );
   }

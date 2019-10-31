@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wintec_waiata/screens/WaiataHome/WaiataHome.dart';
 import 'package:wintec_waiata/screens/MaraeHome/MaraeHome.dart';
 import 'package:wintec_waiata/shared/Marae_icon.dart';
 
@@ -16,7 +17,7 @@ class _HomeState extends State<Home> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> screens = [
     //This is where we add our card per screen
-    MaraeHome("Waiata"),
+    WaiataHome("Waiata"),
     MaraeHome("Marae")
   ];
 
