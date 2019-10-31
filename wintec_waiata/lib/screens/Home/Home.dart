@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
         currentIndex: _selectedIndex,
         //the hex code for the app theme is #FFD700
         // however flutter does not support parse hex code, so we need to use RGBO
-        selectedItemColor: Color.fromRGBO(255, 215, 0, 100),
+        selectedItemColor: Color.fromRGBO(255, 215, 0, 1),
         onTap: _onItemTapped,
       ),
     );

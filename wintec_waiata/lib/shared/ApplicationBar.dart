@@ -5,7 +5,6 @@ class ApplicationBar extends AppBar {
       : super(
           key: key,
           title: title,
-          backgroundColor: Color.fromRGBO(255, 215, 0, 1),
           centerTitle: true,
           actions: <Widget>[
             //this needs to be a PopupMenuButton
