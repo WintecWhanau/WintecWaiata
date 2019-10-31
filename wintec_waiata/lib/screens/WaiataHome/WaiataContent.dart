@@ -16,6 +16,5 @@ class WaiataContent extends StatelessWidget {
         title
       ),
     );
-    
   }
 }
