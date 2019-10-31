@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wintec_waiata/screens/Marae/Marae.dart';
-import 'package:wintec_waiata/screens/Waiata/Waiata.dart';
-
+import 'package:wintec_waiata/screens/MaraeHome/MaraeHome.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -17,8 +15,8 @@ class _HomeState extends State<Home> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> screens = [
     //This is where we add our card per screen
-    WaiataHome('Waiata'),
-    MaraeHome('Marae')
+    MaraeHome("Waiata"),
+    MaraeHome("Marae")
   ];
 
   void _onItemTapped(int index) {
@@ -50,7 +48,9 @@ class _HomeState extends State<Home> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.yellow[900],
+        //the hex code for the app theme is #FFD700
+        // however flutter does not support parse hex code, so we need to use RGBO
+        selectedItemColor: Color.fromRGBO(255, 215, 0, 100),
         onTap: _onItemTapped,
       ),
     );

@@ -5,11 +5,16 @@ void main() => runApp(MyApp());
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        textTheme: TextTheme(
+          title: TextStyle(color: Colors.black),
+        ),
+      ),
     );
   }
 }
