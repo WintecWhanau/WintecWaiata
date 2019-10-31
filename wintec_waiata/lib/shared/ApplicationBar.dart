@@ -24,7 +24,7 @@ class ApplicationBar extends AppBar {
           ],
         );
 
-  void _SelectedItem(String choices) {
-    print('Test');
-  }
+  // void _SelectedItem(String choices) {
+  //   print('Test');
+  // }
 }

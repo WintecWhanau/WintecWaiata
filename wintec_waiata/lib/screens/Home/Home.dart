@@ -17,8 +17,8 @@ class _HomeState extends State<Home> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> screens = [
     //This is where we add our card per screen
-    WaiataHome("Waiata"),
-    MaraeHome("Marae")
+    WaiataHome(),
+    MaraeHome()
   ];
 
   void _onItemTapped(int index) {
