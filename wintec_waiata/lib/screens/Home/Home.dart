@@ -30,6 +30,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //removed this because we can return the dynamic app bar per *Home.dart file
       // appBar: AppBar(
       //   backgroundColor: Colors.yellow[800],
       //   title: Text('Waiata'),
