@@ -92,4 +92,6 @@ unlinked_spec.ds
 # Coverage
 coverage/
 
+#iOS build file
+**/ios/Flutter/App 2.framework
 
