@@ -6,5 +6,5 @@ class MyIcon {
   static const _kFontFam = 'MyIcon';
 
   static const IconData squaremaraeblack_2_ =
-      const IconData(0xe802, fontFamily: _kFontFam);
+      const IconData(0xe801, fontFamily: _kFontFam);
 }
