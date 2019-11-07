@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wintec_waiata/screens/Home/Home.dart';
+import 'package:wintec_waiata/screens/Splash/Splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: Color.fromRGBO(255, 215, 0, 1),
       ),
-      home: Home(),
+      //set up page route
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/home': (context) => Home(),
+      },
     );
   }
 }
