@@ -13,4 +13,8 @@ class MaraeContent extends StatelessWidget {
       alignment: Alignment.center,
     );
   }
+
+  goWaiata(){
+    print("Hello");
+  }
 }
