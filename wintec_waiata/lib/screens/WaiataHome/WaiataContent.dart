@@ -1,4 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:wintec_waiata/shared/Waiata.dart';
+import 'package:wintec_waiata/shared/WaiataAux.dart';
 
 class WaiataContent extends StatelessWidget {
   final int index;
@@ -11,7 +16,7 @@ class WaiataContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: GestureDetector(
-        onTap: () => goWaiata(context, index), //set null then point to method stops auto trigger
+        onTap: () => initWaiata(context, index), //set null then point to method stops auto trigger
         child: Stack(
           children: <Widget>[
             Card(
@@ -23,7 +28,7 @@ class WaiataContent extends StatelessWidget {
             ),
             Center(
               child: Text(
-                "Te Wananga O Aotearoa o kirikiriroa",
+                title,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -38,7 +43,25 @@ class WaiataContent extends StatelessWidget {
     );
   }
 
-  goWaiata(BuildContext context, int index){
+  //load waiata info for brief through json file
+  initWaiata(BuildContext context, int index) async {
+    //proper index to start from 0
+    index -=1;
+    
+    //read and convert json
+    String jsonContent = await rootBundle.loadString("assets/json/waiata.json");
+    List json = jsonDecode(jsonContent);
+    
+    //initialize static waita from json
+    WaiataAux.waiata = new Waiata(json[index]["name"], json[index]["brief"], 
+                                  json[index]["maoriWords"], json[index]["englishWords"], 
+                                  json[index]["thumbnailPath"], json[index]["vocalPath"], 
+                                  json[index]["nonVocalPath"]);
+   
+    //debug
+    // print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
+    
+    //navigate to brief page
     Navigator.of(context).pushNamed('/waiataBrief');
   }
 }
