@@ -1,6 +1,6 @@
 class Waiata {
-  String name, brief, maoriWords, englishWords, thumbnail, vocalPath,nonVocalPath;
+  String name, brief, maoriWords, englishWords, thumbnailPath, vocalPath,nonVocalPath;
 
   Waiata(this.name, this.brief, this.maoriWords, 
-          this.englishWords, this.thumbnail, this.vocalPath, this.nonVocalPath);
+          this.englishWords, this.thumbnailPath, this.vocalPath, this.nonVocalPath);
 }

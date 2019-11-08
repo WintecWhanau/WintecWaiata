@@ -23,15 +23,15 @@ class WaiataHome extends StatelessWidget {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               delegate: SliverChildListDelegate(
                 [
-                  //change waiata name to json element
-                  WaiataContent(1,waiataName, Colors.blue),
-                  WaiataContent(2,waiataName, Colors.green),
-                  WaiataContent(3,waiataName, Colors.yellow),
-                  WaiataContent(4,waiataName, Colors.orange),
-                  WaiataContent(5,waiataName, Colors.blue),
-                  WaiataContent(6,waiataName, Colors.red),
-                  WaiataContent(7,waiataName, Colors.blue),
-                  WaiataContent(8,waiataName, Colors.green),
+                  //initialize waiata cards. int constructor is index for json assets/json/waiata.json
+                  WaiataContent(0,"E Kore Koe E Ngaro"),
+                  WaiataContent(1,"He Maimai Aroha nā Tāwhiao"),
+                  WaiataContent(2,waiataName),
+                  WaiataContent(3,waiataName),
+                  WaiataContent(4,waiataName),
+                  WaiataContent(5,waiataName),
+                  WaiataContent(6,waiataName),
+                  WaiataContent(7,waiataName),
                 ],
               ),
             ),

@@ -1,19 +1,19 @@
 [
     {
-        "name": "name1",
-        "brief": "brief1",
-        "maoriWords": "",
-        "englishWords": "",
-        "thumbnailPath": "",
+        "name": "E Kore Koe E Ngaro",
+        "brief": "This waiata was composed by members of local kapahaka Te Iti Kahurangi, as a tribute to the ongoing support the group has received from Wintec over the years.\n\nIt references names and stories associated with our marae, including the wharenui ‘Te Kākano a te Kaahu’, the interior carving ‘Tāwhaki’, the large memorial pillar dedicated to the late Māori Queen ‘Te Atairangikaahu’, and the three buildings which represent ‘Ngā Kete Wānanga’, the three baskets of knowledge.\n\nWhen performing this waiata, the last line 'E ko Te Kuratini o Waikato' may also be sung at the beginning as an intro, and also repeated at the end.",
+        "maoriWords": "E kore koe e ngaro he kākano i ruia Kākano a te Kaahu e tū nei e Te Kōpū Mānia, te ngāwhā whakatupu Ka tupu he tangata, rere ki te ao\n\nHorahia Matariki, kūmea ngā waka Herea ki te pou o te aroha e Te Atairangikaahu, tāiri kei runga Ko Kīngi Tūheitia ki te whenua e\n\nPiki ake Tāwhaki, tāhūhū matapū Ngā kete wānanga e toru e Whītikitia rā, ka turuturu iho E ko Te Kuratini o Waikato e.",
+        "englishWords": "You are not lost, seed of heaven Kākano a te kāhu stand tall Te Kōpū Mānia, cultivate new growth Foster this person of the world\n\nMatariki on display, draw in all canoes Bind them to the posts of support and care Te Atairangikaahu, fly above Kingi Tūheitia, hold steadfast below\n\nTāwhaki ascend, prepare the house For the three baskets of knowledge Bind them, fasten them To Waikato Institute of Technology",
+        "thumbnailPath": "assets/images/image.png",
         "vocalPath": "",
         "nonVocalPath": ""
     },
     {
-        "name": "name2",
-        "brief": "brief2",
-        "maoriWords": "",
-        "englishWords": "",
-        "thumbnailPath": "",
+        "name": "He Maimai Aroha nā Tāwhiao",
+        "brief": "After the devastation of the Waikato raupatu or land confiscations of 1863, Kingi Tāwhiao sought refuge in Maniapoto or the King Country. After nearly two decades , in the early 1880s he made an emotional return to Waikato.\n\nThis lament express his deeply felt sorrow for the land and its meaning to him. It includes in the lyrics the name of our marae, To Kōpū Mānia o Kirikiriroa.",
+        "maoriWords": "Ka mātakitaki iho au ki te riu o Waikato Anō nei hei kapo kau ake māku Ki te kapu o taku ringa, Ka whakamiri noa I tōna aratau, E tia nei he tupu pua hou.\n\nKia hiwa ake au I te tihi o Pirongia, Inā hei toronga whakaruruhau mōna Ki tōku tauawhirotanga.\n\nAnā! Te ngoto o tōna ngāwhā I ōna uma kīhai I ārikarika A Maungatautari, a Maungakawa, Ōku puke maunga, ngā taonga tuku iho Hoki ake nei au ki tōku awa koiora Me ōna pikonga He kura tangihia o te mātāmuri.\n\nE whakawhiti atu ai I te kōpū mānia O Kirikiriroa Me ōna māra kai, te ngāwhā whakatupu Ake o te whenua mōmona, Hei kawe ki Ngāruawāhia, Te huinga o te tangata.\n\nArā, te pae haumako, hei okiokinga mō Taku upoko, Hei tirohanga atu mā raro I ngā hūhā O Taupiri.\n\nKei reira rā, kei te oroko hanganga o te tangata Wāhia te tungaroa o te whare, Te whakaputanga mō te Kīngi.",
+        "englishWords": "I look down on the valley of Waikato, As though to hold it in the hollow of my hand And caress its beauty Like some tender verdant thing.\n\nI reach out from the top of Pirongia As though to cover and protect its Substance with my own.\n\nSee how it bursts through the full bosoms Of Maungatautari and Maungakawa, Hills of my inheritance The river of life, each curve more beautiful Than the last.\n\nCrossing the smooth belly of Kirikiriroa, Its gardens bursting with fullness of the rich Earth towards the meeting place at Ngāruawāhia.\n\nThere on the fertile mound I would rest My head And look through the thighs of Taupiri There at the place of all creation Let the King come forth.",
+        "thumbnailPath": "assets/images/image2.jpg",
         "vocalPath": "",
         "nonVocalPath": ""
     },

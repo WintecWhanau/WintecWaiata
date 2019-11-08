@@ -8,9 +8,8 @@ import 'package:wintec_waiata/shared/WaiataAux.dart';
 class WaiataContent extends StatelessWidget {
   final int index;
   final String title;
-  final Color colour;
 
-  WaiataContent(this.index, this.title, this.colour);
+  WaiataContent(this.index, this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +43,7 @@ class WaiataContent extends StatelessWidget {
   }
 
   //load waiata info for brief through json file
-  initWaiata(BuildContext context, int index) async {
-    //proper index to start from 0
-    index -=1;
-    
+  initWaiata(BuildContext context, int index) async { 
     //read and convert json
     String jsonContent = await rootBundle.loadString("assets/json/waiata.json");
     List json = jsonDecode(jsonContent);
@@ -59,7 +55,7 @@ class WaiataContent extends StatelessWidget {
                                   json[index]["nonVocalPath"]);
    
     //debug
-    // print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
+    print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
     
     //navigate to brief page
     Navigator.of(context).pushNamed('/waiataBrief');

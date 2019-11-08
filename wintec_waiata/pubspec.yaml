@@ -58,6 +58,9 @@ flutter:
     - family:  MyIcon
       fonts:
         - asset: assets/fonts/MyIcon.ttf
+    - family: sansSerif
+      fonts:
+        - asset: assets/fonts/micross.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
