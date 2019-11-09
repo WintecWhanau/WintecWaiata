@@ -12,34 +12,51 @@ class WaiataBrief extends StatelessWidget {
       appBar: ApplicationBar(
         title: Text(WaiataAux.waiata.name),
       ),
-      body: Column(
-        children: <Widget>[
-          Image(
-            image: AssetImage(WaiataAux.waiata.thumbnailPath),  
-          ),
-          Container(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 0.0),
-            child: Text(
-              WaiataAux.waiata.name + " brief",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 19.0,
-              ),
-            )
-          ),
-          Container(
-          padding: EdgeInsets.all(20.0),
-            child: Text(
-              WaiataAux.waiata.englishWords
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: < Widget > [
+            Stack(
+              alignment: Alignment.center,
+              children: < Widget > [
+                Image(
+                  fit: BoxFit.fill,
+                  image: AssetImage(WaiataAux.waiata.thumbnailPath),
+                ),
+                Text(
+                  WaiataAux.waiata.name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25.0,
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 0.0),
+              child: Text(
+                WaiataAux.waiata.name + " brief",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 19.0,
+                ),
+              )
+            ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                WaiataAux.waiata.brief
+              ),
+            ),
+          ],
+        ),
       )
     );
   }
 
-  goWaiata(int index){
+  goWaiata(int index) {
     print(index);
   }
 }

@@ -13,33 +13,35 @@ class WaiataContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: GestureDetector(
+    return GestureDetector(
         onTap: () => initWaiata(context, index), //set null then point to method stops auto trigger
         child: Stack(
           children: <Widget>[
             Card(
+              elevation: 2.0,
               child: Image(
                 image: AssetImage("assets/images/image2.jpg"),
-                // height: 250.0,
+                // height: 150.0,
                 // width: 92.0,
               ),
             ),
             Center(
-              child: Text(
-                title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 19.0,
-                  ),
-                textAlign: TextAlign.center,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 19.0,
+                    ),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 
   //load waiata info for brief through json file
@@ -49,13 +51,13 @@ class WaiataContent extends StatelessWidget {
     List json = jsonDecode(jsonContent);
     
     //initialize static waita from json
-    WaiataAux.waiata = new Waiata(json[index]["name"], json[index]["brief"], 
+    WaiataAux.waiata = await new Waiata(json[index]["name"], json[index]["brief"], 
                                   json[index]["maoriWords"], json[index]["englishWords"], 
                                   json[index]["thumbnailPath"], json[index]["vocalPath"], 
                                   json[index]["nonVocalPath"]);
    
     //debug
-    print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
+    // print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
     
     //navigate to brief page
     Navigator.of(context).pushNamed('/waiataBrief');

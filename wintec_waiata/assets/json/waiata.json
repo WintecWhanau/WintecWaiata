@@ -27,28 +27,19 @@
         "nonVocalPath": ""
     },
     {
+        "name": "Tutira mai nga iwi",
+        "brief": "tutira",
+        "maoriWords": "",
+        "englishWords": "",
+        "thumbnailPath": "assets/images/image2.jpg",
+        "vocalPath": "",
+        "nonVocalPath": ""
+    },
+    {
         "name": "Pupuke Te Hihiri",
         "brief": "nā Nganehu Turner ngā kupu, nā Tania Oxenham te rangi © 2004 Nganehu Turner (Ngāti Maniapoto) held the position of pouako (tutor) of Te Reo Māori and kuia at Wintec for many years.\n\nThis was one of the songs she dedicated to the Māori students of Wintec, all who hoped to see their aspirations fulfilled.",
         "maoriWords": "Piki ake e tama e Hine I te ahurei o te Kuratini o Waikato He mātāpono whakaū kounga Ka whakaata i te angitū Piki ake e tama e Hine I te ahurei o te Kuratini o Waikato He mātāpono whakaū kounga Ka whakaata i te angitū.\n\nPupuke te hihiri Pupuke te mahara Pupuke te wānanga a te Kore Pupuke te hihiri Pupuke te mahara Pupuke te wānanga a te Kore\n\nNō ngā kete i pikihia e Tāwhaki He wairua, he mauri, he mana, he reo He māramatanga, he mātauranga He iho o te ahurea.\n\nPupuke te hihiri Pupuke te mahara Pupuke te wānanga a te Kore Pupuke te hihir Pupuke te mahara Pupuke te wānanga a te Kore A te kore",
         "englishWords": "Ascend Son, Daughter To the pinnacle of Wintec Hold fast to quality principles That reflect your successes Ascend Son, Daughter To the pinnacle of Wintec Hold fast to quality principles That reflect your successes.\n\nFrom conception the increase From increase the thought From thought the knowledge out of Chaos From conception the increase From increase the thought From thought the knowledge out of Chaos.\n\nFrom the baskets of knowledge Tāwhaki retrieved Comes spirit, life-force, power, language, Understanding and knowledge The isthmus of culture.\n\nFrom conception the increase From increase the thought From thought the knowledge out of Chaos From conception the increase From increase the thought From thought the knowledge out of Chaos",
-        "thumbnailPath": "assets/images/image2.jpg",
-        "vocalPath": "",
-        "nonVocalPath": ""
-    },
-    {
-        "name": "Me Whakaiti Tātou",
-        "brief": "No biref for this song yet",
-        "maoriWords": "Me whakaiti tātou ki te reo karanga Whoatu te aroha.\n\nMe whakaiti tātou ki te reo karanga Whoatu te aroha.\n\nKo tō tātou hiahia, kia pai te noho Ki tēnei kāinga, he kāinga mahana",
-        "englishWords": "Upon the call We humble ourselves And give love.\n\nUpon the call We humble ourselves And give love.\n\nIt is our desire that you stay well In this house of warmth",
-        "thumbnailPath": "assets/images/image2.jpg",
-        "vocalPath": "",
-        "nonVocalPath": ""
-    },
-    {
-        "name": "Pua Te Kōwhai",
-        "brief": "This waiata is suitable for any occasion and is still used both in and out of Wintec. The song jumps around as it follows the flight path of the Tui.\n\nHistorically, the hill that Wintec sits on was part of the lands designated ‘mara’ or gardening land, thus, the name Te Kōpū Mānia o Kirikiriroa – The Smooth Belly (fertile lands) of Kirikiriroa (known presently as Hamilton).\n\nWaikato-Tainui, Ngāti Hauā and Ngāti Wairere are the mana whenua (known affiliated tribes) of this land.",
-        "maoriWords": "Pua te kōwhai Ngawhā te kōrari He tohu kōanga Tau mai e Tui ki tō kāpunipuni Honihoni, kohikohi Hei oranga, hei rongoā Pania te kiri ki te kōwhai kura E Tui haurangi i te tākoha o te Atua Rere atu, hoki mai Parea te ua kōwhai Ka whiti mai te rā e",
-        "englishWords": "The kōwhai blooms Bursts open in readiness for plucking A sign of Spring The Tui begin to assemble To nibble to gather For life and well-being The stain of the kōwhai touches While Tui get drunk on the nectar of God Flittering away, returning A display of yellow As the sun shines",
         "thumbnailPath": "assets/images/image2.jpg",
         "vocalPath": "",
         "nonVocalPath": ""
@@ -63,10 +54,10 @@
         "nonVocalPath": ""
     },
     {
-        "name": "Waiata 8",
-        "brief": "No brief yet",
-        "maoriWords": "N/A",
-        "englishWords": "N/A",
+        "name": "Pua Te Kōwhai",
+        "brief": "This waiata is suitable for any occasion and is still used both in and out of Wintec. The song jumps around as it follows the flight path of the Tui.\n\nHistorically, the hill that Wintec sits on was part of the lands designated ‘mara’ or gardening land, thus, the name Te Kōpū Mānia o Kirikiriroa – The Smooth Belly (fertile lands) of Kirikiriroa (known presently as Hamilton).\n\nWaikato-Tainui, Ngāti Hauā and Ngāti Wairere are the mana whenua (known affiliated tribes) of this land.",
+        "maoriWords": "Pua te kōwhai Ngawhā te kōrari He tohu kōanga Tau mai e Tui ki tō kāpunipuni Honihoni, kohikohi Hei oranga, hei rongoā Pania te kiri ki te kōwhai kura E Tui haurangi i te tākoha o te Atua Rere atu, hoki mai Parea te ua kōwhai Ka whiti mai te rā e",
+        "englishWords": "The kōwhai blooms Bursts open in readiness for plucking A sign of Spring The Tui begin to assemble To nibble to gather For life and well-being The stain of the kōwhai touches While Tui get drunk on the nectar of God Flittering away, returning A display of yellow As the sun shines",
         "thumbnailPath": "assets/images/image2.jpg",
         "vocalPath": "",
         "nonVocalPath": ""
