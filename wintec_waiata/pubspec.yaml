@@ -32,8 +32,8 @@ dev_dependencies:
 flutter_icons:
   ios: true
   android: true
-  image_path_ios: "assets/image/ic_launcher_ios.png"
-  image_path_android: "assets/image/ic_launcher_android.png"
+  image_path_ios: "assets/images/icon/ic_launcher_ios.png"
+  image_path_android: "assets/images/icon/ic_launcher_android.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -49,6 +49,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/json/
+    - assets/videos/
 
   # To add assets to your application, add an assets section, like this:
 
