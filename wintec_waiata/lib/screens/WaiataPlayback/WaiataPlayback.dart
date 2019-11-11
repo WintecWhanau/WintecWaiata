@@ -5,6 +5,8 @@ import 'package:wintec_waiata/shared/ApplicationBar.dart';
 import 'package:wintec_waiata/shared/Lyrics.dart';
 import 'package:wintec_waiata/shared/WaiataAux.dart';
 
+//TODO: Videos will change based on their given paths in the json file. assets/json/waiata.json
+
 class WaiataPlayback extends StatefulWidget {
   
   WaiataPlayback({
@@ -71,17 +73,6 @@ class _WaiataPlaybackState extends State < WaiataPlayback > {
           Chewie(
             controller: chewieController,
           ),
-          //add a waiata title under video?
-          // Padding(
-          //   padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
-          //   child: Text(
-          //     WaiataAux.waiata.name,
-          //     style: TextStyle(
-          //       fontWeight: FontWeight.bold,
-          //       fontSize: 20.0,
-          //     ),
-          //   ),
-          // ),
           Expanded(
             child: Lyrics(),
           ),

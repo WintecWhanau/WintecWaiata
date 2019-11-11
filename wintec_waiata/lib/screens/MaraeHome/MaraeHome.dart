@@ -16,25 +16,17 @@ class MaraeHome extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
+      body: Container( //TODO: figure out sizing of cards
         child: CustomScrollView(
           slivers: < Widget > [
             SliverGrid(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               delegate: SliverChildListDelegate(
                 [
-                  MaraeContent(Colors.blue),
-                  MaraeContent(Colors.green),
-                  MaraeContent(Colors.yellow),
-                  MaraeContent(Colors.orange),
-                  MaraeContent(Colors.blue),
-                  MaraeContent(Colors.red),
-                  MaraeContent(Colors.blue),
-                  MaraeContent(Colors.green),
-                  MaraeContent(Colors.yellow),
-                  MaraeContent(Colors.orange),
-                  MaraeContent(Colors.blue),
-                  MaraeContent(Colors.red),
+                  MaraeContent("Marae info", "assets/images/image2.jpg", "Marae"),
+                  MaraeContent("Carvings", "assets/images/image2.jpg", "Marae"),
+                  MaraeContent("Protocols", "assets/images/image2.jpg", "Marae"),
+                  MaraeContent("Bookings", "assets/images/image2.jpg", "Marae"),
                 ],
               ),
             ),

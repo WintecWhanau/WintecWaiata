@@ -15,18 +15,18 @@ class _LyricsState extends State < Lyrics > {
 
   bool changed = false;
   String words = WaiataAux.waiata.maoriWords;
-  String button = "English";
+  String buttonText = "English";
 
   changeLyrics() {
     setState(() {
       if (!changed) {
         words = WaiataAux.waiata.englishWords;
         changed = true;
-        button = "Māori";
+        buttonText = "Māori";
       } else {
         words = WaiataAux.waiata.maoriWords;
         changed = false;
-        button = "English";
+        buttonText = "English";
       }
     });
   }
@@ -42,21 +42,23 @@ class _LyricsState extends State < Lyrics > {
               padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0.0),
               child: Column(
                 children: < Widget > [
-                  Text(
-                    WaiataAux.waiata.name,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      WaiataAux.waiata.name,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                        decoration: TextDecoration.underline,
+                      ),
+                      textAlign: TextAlign.start,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-                    child: Text(
-                      words,
-                      style: TextStyle(
-                        fontSize: 20.0, //larger scale
+                      child: Text(
+                        words,
                       ),
-                    ),
                   ),
                 ],
               ),
@@ -71,8 +73,24 @@ class _LyricsState extends State < Lyrics > {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 2.0),
                   child: RaisedButton(
+                    color: Colors.black,
+                    splashColor: Colors.yellow,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(5.0),
+                        bottom: Radius.circular(5.0),
+                      ),
+                      side: BorderSide(
+                        color: Colors.yellow
+                      )
+                    ),
                     onPressed: () => changeLyrics(),
-                    child: Text(button),
+                    child: Text(
+                      buttonText,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
               ),
             ),

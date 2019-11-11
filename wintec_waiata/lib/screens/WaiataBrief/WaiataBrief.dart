@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wintec_waiata/screens/WaiataBrief/BriefButton.dart';
 import 'package:wintec_waiata/shared/ApplicationBar.dart';
 import 'package:wintec_waiata/shared/WaiataAux.dart';
 
@@ -21,7 +22,7 @@ class WaiataBrief extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: < Widget > [
-            Stack(
+            Stack( //thumbnail with text overlayed
               alignment: Alignment.center,
               children: < Widget > [
                 Image(
@@ -46,6 +47,7 @@ class WaiataBrief extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
+                  decoration: TextDecoration.underline,
                 ),
               )
             ),
@@ -59,39 +61,19 @@ class WaiataBrief extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 2.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: < Widget > [
-              Expanded(
-                child: RaisedButton(
-                  onPressed: () {
-                    WaiataAux.waiata.vocal = true;
-                    Navigator.of(context).pushNamed('/waiataPlayback');
-                  },
-                  child: Text("Vocal"),
-                ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/waiataWords');
-                  },
-                  child: Text("Lyrics"),
-                ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                  onPressed: () {
-                    WaiataAux.waiata.vocal = false;
-                    Navigator.of(context).pushNamed('/waiataPlayback');
-                  },
-                  child: Text("Non vocal"),
-                ),
-              ),
-            ],
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: < Widget > [
+            Expanded(
+              child: BriefButton("Vocal", '/waiataPlayback', 1),
+            ),
+            Expanded(
+              child: BriefButton("Lyrics", '/waiataWords', 2),
+            ),
+            Expanded(
+              child: BriefButton("Non vocal", '/waiataPlayback', 3),
+            ),
+          ],
         ),
       ),
     );

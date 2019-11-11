@@ -1,20 +1,52 @@
 import 'package:flutter/material.dart';
 
 class MaraeContent extends StatelessWidget {
-  final Color colour;
+  final String title;
+  final String image;
+  final String page;
 
-  MaraeContent(this.colour);
-
+  MaraeContent(this.title, this.image, this.page);
+  //TODO: figure out sizing of cards
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100.0,
-      color: colour,
-      alignment: Alignment.center,
+    return SizedBox(
+      height: 400.0,
+          child: GestureDetector( // provides a way for the whole card to be clickable
+        onTap: () => changeRoute(page), //set null then point to method stops auto trigger
+        child: Card(
+          elevation: 2.0,
+          child: Column(
+            children: < Widget > [
+              Expanded(
+                child: Image(
+                  image: AssetImage(image),
+                ),
+              ),
+              Container(
+                // color: Colors.black,
+                child: Row( //used to expand song name across entire bottom of card
+                  children: < Widget > [
+                    Expanded(
+                      child: FlatButton( //only used a flat button for the styling
+                        onPressed: null,
+                        disabledTextColor: Colors.black,
+                        child: Text(
+                          title,
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 
-  goWaiata(){
+  changeRoute(String page){
     print("Hello");
   }
 }
