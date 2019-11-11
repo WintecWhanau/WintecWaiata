@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # video_player: ^0.10.2+5
+  chewie: ^0.9.8+1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -32,8 +34,8 @@ dev_dependencies:
 flutter_icons:
   ios: true
   android: true
-  image_path_ios: "assets/image/ic_launcher_ios.png"
-  image_path_android: "assets/image/ic_launcher_android.png"
+  image_path_ios: "assets/images/icon/ic_launcher_ios.png"
+  image_path_android: "assets/images/icon/ic_launcher_android.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -47,6 +49,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/images/
+    - assets/json/
+    - assets/videos/
 
   # To add assets to your application, add an assets section, like this:
 
@@ -56,6 +61,9 @@ flutter:
     - family:  MyIcon
       fonts:
         - asset: assets/fonts/MyIcon.ttf
+    - family: sansSerif
+      fonts:
+        - asset: assets/fonts/micross.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

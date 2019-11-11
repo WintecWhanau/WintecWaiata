@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
 
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 1),
       () {
         Navigator.of(context).pushReplacementNamed('/home');
       },

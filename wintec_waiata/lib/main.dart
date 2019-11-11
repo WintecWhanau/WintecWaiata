@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wintec_waiata/screens/Home/Home.dart';
 import 'package:wintec_waiata/screens/Splash/Splash.dart';
+import 'package:wintec_waiata/screens/WaiataBrief/WaiataBrief.dart';
+import 'package:wintec_waiata/screens/WaiataPlayback/WaiataPlayback.dart';
+import 'package:wintec_waiata/screens/WaiataWords/WaiataWords.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +20,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashScreen(),
         '/home': (context) => Home(),
+        '/waiataBrief': (context) => WaiataBrief(),
+        '/waiataWords': (context) => WaiataWords(),
+        '/waiataPlayback': (context) => WaiataPlayback(),
       },
     );
   }
