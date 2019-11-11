@@ -10,7 +10,12 @@ class WaiataBrief extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ApplicationBar(
-        title: Text(WaiataAux.waiata.name),
+        title: Text(
+          WaiataAux.waiata.name,
+          style: TextStyle(
+            fontSize: 15.0,
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -40,7 +45,7 @@ class WaiataBrief extends StatelessWidget {
                 WaiataAux.waiata.name + " brief",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 19.0,
+                  fontSize: 20.0,
                 ),
               )
             ),
@@ -52,7 +57,43 @@ class WaiataBrief extends StatelessWidget {
             ),
           ],
         ),
-      )
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 2.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: < Widget > [
+              Expanded(
+                child: RaisedButton(
+                  onPressed: () {
+                    WaiataAux.waiata.vocal = true;
+                    Navigator.of(context).pushNamed('/waiataPlayback');
+                  },
+                  child: Text("Vocal"),
+                ),
+              ),
+              Expanded(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/waiataWords');
+                  },
+                  child: Text("Lyrics"),
+                ),
+              ),
+              Expanded(
+                child: RaisedButton(
+                  onPressed: () {
+                    WaiataAux.waiata.vocal = false;
+                    Navigator.of(context).pushNamed('/waiataPlayback');
+                  },
+                  child: Text("Non vocal"),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 

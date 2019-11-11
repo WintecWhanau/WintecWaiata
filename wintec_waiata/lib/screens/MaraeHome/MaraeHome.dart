@@ -9,12 +9,16 @@ class MaraeHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ApplicationBar(
-        title: Text("Marae"),
-        //color:
+        title: Text(
+          "Te Kōpū Mānia o Kirikiriroa",
+          style: TextStyle(
+            fontSize: 18.0,
+          ),
+        ),
       ),
       body: Container(
         child: CustomScrollView(
-          slivers: <Widget>[
+          slivers: < Widget > [
             SliverGrid(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               delegate: SliverChildListDelegate(
