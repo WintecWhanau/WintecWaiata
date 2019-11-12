@@ -96,3 +96,4 @@ coverage/
 **/ios/Flutter/App 2.framework
 
 *.lock
+**/ios/Podfile
