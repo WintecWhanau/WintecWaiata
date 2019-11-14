@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wintec_waiata/screens/Home/Home.dart';
+import 'package:wintec_waiata/screens/MaraeInfo/MaraeInfo.dart';
 import 'package:wintec_waiata/screens/Splash/Splash.dart';
 import 'package:wintec_waiata/screens/WaiataBrief/WaiataBrief.dart';
 import 'package:wintec_waiata/screens/WaiataPlayback/WaiataPlayback.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/waiataBrief': (context) => WaiataBrief(),
         '/waiataWords': (context) => WaiataWords(),
         '/waiataPlayback': (context) => WaiataPlayback(),
+        '/waiataInfo': (context) => MaraeInfo()
       },
     );
   }

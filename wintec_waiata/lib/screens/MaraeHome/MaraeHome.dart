@@ -10,22 +10,26 @@ class MaraeHome extends StatelessWidget {
     return Scaffold(
       appBar: ApplicationBar(
         title: Text(
-          "Te Kōpū Mānia o Kirikiriroa",
+          "MARAE INFORMATION",
           style: TextStyle(
             fontSize: 18.0,
           ),
         ),
       ),
-      body: Container( //TODO: figure out sizing of cards
+      body: Container(
+        //TODO: figure out sizing of cards
         child: CustomScrollView(
-          slivers: < Widget > [
+          slivers: <Widget>[
             SliverGrid(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               delegate: SliverChildListDelegate(
                 [
-                  MaraeContent("Marae info", "assets/images/image2.jpg", "Marae"),
+                  MaraeContent(
+                      "Marae info", "assets/images/image2.jpg", "Marae"),
                   MaraeContent("Carvings", "assets/images/image2.jpg", "Marae"),
-                  MaraeContent("Protocols", "assets/images/image2.jpg", "Marae"),
+                  MaraeContent(
+                      "Protocols", "assets/images/image2.jpg", "Marae"),
                   MaraeContent("Bookings", "assets/images/image2.jpg", "Marae"),
                 ],
               ),

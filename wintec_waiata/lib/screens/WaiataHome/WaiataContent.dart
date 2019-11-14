@@ -14,12 +14,12 @@ class WaiataContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector( // provides a way for the whole card to be clickable
-      onTap: () => initWaiata(context, index), //set null then point to method stops auto trigger
-      child: Card(
-        elevation: 2.0,
+    return Card(
+      elevation: 2.0,
+      child: InkWell(
+        onTap: () => initWaiata(context, index),
         child: Column(
-          children: < Widget > [
+          children: <Widget>[
             Expanded(
               child: Image(
                 image: AssetImage(image),
@@ -27,10 +27,12 @@ class WaiataContent extends StatelessWidget {
             ),
             Container(
               // color: Colors.black,
-              child: Row( //used to expand song name across entire bottom of card
-                children: < Widget > [
+              child: Row(
+                //used to expand song name across entire bottom of card
+                children: <Widget>[
                   Expanded(
-                    child: FlatButton( //only used a flat button for the styling
+                    child: FlatButton(
+                      //only used a flat button for the styling
                       onPressed: null,
                       disabledTextColor: Colors.black,
                       child: Text(
@@ -55,10 +57,14 @@ class WaiataContent extends StatelessWidget {
     List json = jsonDecode(jsonContent);
 
     //initialize static waita from json
-    WaiataAux.waiata = new Waiata(json[index]["name"], json[index]["brief"],
-      json[index]["maoriWords"], json[index]["englishWords"],
-      json[index]["thumbnailPath"], json[index]["vocalPath"],
-      json[index]["nonVocalPath"]);
+    WaiataAux.waiata = new Waiata(
+        json[index]["name"],
+        json[index]["brief"],
+        json[index]["maoriWords"],
+        json[index]["englishWords"],
+        json[index]["thumbnailPath"],
+        json[index]["vocalPath"],
+        json[index]["nonVocalPath"]);
 
     //debug
     // print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
