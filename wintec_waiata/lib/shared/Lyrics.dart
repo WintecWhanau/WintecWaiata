@@ -30,7 +30,7 @@ class _LyricsState extends State < Lyrics > {
       }
     });
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -48,7 +48,7 @@ class _LyricsState extends State < Lyrics > {
                       WaiataAux.waiata.name,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: 22.0,
                         decoration: TextDecoration.underline,
                       ),
                       textAlign: TextAlign.center,
@@ -61,7 +61,7 @@ class _LyricsState extends State < Lyrics > {
                         child: Text(
                           words,
                           style: TextStyle(
-                            fontSize: 15.0,
+                            fontSize: 20.0,
                           ),
                           textAlign: TextAlign.center,
                         ),
