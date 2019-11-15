@@ -30,7 +30,7 @@ class _LyricsState extends State < Lyrics > {
       }
     });
   }
-  //TODO fix tutira mai nga iwi lyric layout
+  
   @override
   Widget build(BuildContext context) {
     return Column(
