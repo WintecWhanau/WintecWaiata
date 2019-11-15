@@ -30,7 +30,7 @@ class _LyricsState extends State < Lyrics > {
       }
     });
   }
-
+  //TODO fix tutira mai nga iwi lyric layout
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -43,7 +43,7 @@ class _LyricsState extends State < Lyrics > {
               child: Column(
                 children: < Widget > [
                   Container(
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.center,
                     child: Text(
                       WaiataAux.waiata.name,
                       style: TextStyle(
@@ -51,13 +51,20 @@ class _LyricsState extends State < Lyrics > {
                         fontSize: 20.0,
                         decoration: TextDecoration.underline,
                       ),
-                      textAlign: TextAlign.start,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-                      child: Text(
-                        words,
+                      child: Container(
+                        alignment: Alignment.center,
+                        child: Text(
+                          words,
+                          style: TextStyle(
+                            fontSize: 15.0,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                   ),
                 ],

@@ -49,6 +49,7 @@ class WaiataBrief extends StatelessWidget {
                   fontSize: 20.0,
                   decoration: TextDecoration.underline,
                 ),
+                textAlign: TextAlign.center,
               )
             ),
             Container(
@@ -61,19 +62,22 @@ class WaiataBrief extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: < Widget > [
-            Expanded(
-              child: BriefButton("Vocal", '/waiataPlayback', 1),
-            ),
-            Expanded(
-              child: BriefButton("Lyrics", '/waiataWords', 2),
-            ),
-            Expanded(
-              child: BriefButton("Non vocal", '/waiataPlayback', 3),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: < Widget > [
+              Expanded(
+                child: BriefButton("Vocal", '/waiataPlayback', 1),
+              ),
+              Expanded(
+                child: BriefButton("Lyrics", '/waiataWords', 2),
+              ),
+              Expanded(
+                child: BriefButton("Non vocal", '/waiataPlayback', 3),
+              ),
+            ],
+          ),
         ),
       ),
     );
