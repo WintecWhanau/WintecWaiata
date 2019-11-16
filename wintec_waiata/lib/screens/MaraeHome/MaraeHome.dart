@@ -10,7 +10,7 @@ class MaraeHome extends StatelessWidget {
     return Scaffold(
       appBar: ApplicationBar(
         title: Text(
-          "MARAE INFORMATION",
+          'TE KŌPŪ MĀNIA O KIRIKIRIROA',
           style: TextStyle(
             fontSize: 18.0,
           ),
@@ -26,10 +26,11 @@ class MaraeHome extends StatelessWidget {
               delegate: SliverChildListDelegate(
                 [
                   MaraeContent(
-                      "Marae info", "assets/images/image2.jpg", "Marae"),
-                  MaraeContent("Carvings", "assets/images/image2.jpg", "Marae"),
+                      "Marae info", "assets/images/image2.jpg", "maraeInfo"),
                   MaraeContent(
-                      "Protocols", "assets/images/image2.jpg", "Marae"),
+                      "Carvings", "assets/images/image2.jpg", "protocls"),
+                  MaraeContent(
+                      "Protocols", "assets/images/image2.jpg", 'protocols'),
                   MaraeContent("Bookings", "assets/images/image2.jpg", "Marae"),
                 ],
               ),

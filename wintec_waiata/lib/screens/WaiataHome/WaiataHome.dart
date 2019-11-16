@@ -4,7 +4,6 @@ import 'package:wintec_waiata/shared/ApplicationBar.dart';
 import 'WaiataContent.dart';
 
 class WaiataHome extends StatelessWidget {
-
   final String waiataName = "Waiata";
 
   WaiataHome();
@@ -23,22 +22,29 @@ class WaiataHome extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.fromLTRB(0.0, 2.0, 0.0, 0.0),
         child: CustomScrollView(
-          slivers: < Widget > [
-            SliverGrid( 
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          slivers: <Widget>[
+            SliverGrid(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               delegate: SliverChildListDelegate(
                 [
                   //TODO: Implement a scalable way of adding waiata cards. Once instantiated it is scalable but find a better solution to initialize each card.
                   //TODO: Add in Waiata info for Tutira mai nga iwi
                   //TODO: Add in waiata images and videos
-                  
+
                   //initialize waiata cards. int constructor is index for json assets/json/waiata.json
-                  WaiataContent(0, "E Kore Koe E Ngaro", "assets/images/image2.jpg"),
-                  WaiataContent(1, "He Maimai Aroha nā Tāwhiao", "assets/images/image2.jpg"),
-                  WaiataContent(2, "Waikato Te Awa", "assets/images/image2.jpg"),
-                  WaiataContent(3, "Tutira mai nga iwi", "assets/images/image2.jpg"),
-                  WaiataContent(4, "Pupuke Te Hihiri", "assets/images/image2.jpg"),
-                  WaiataContent(5, "I Te Whare Whakapiri", "assets/images/image2.jpg"),
+                  WaiataContent(
+                      0, "E Kore Koe E Ngaro", "assets/images/image2.jpg"),
+                  WaiataContent(1, "He Maimai Aroha nā Tāwhiao",
+                      "assets/images/image2.jpg"),
+                  WaiataContent(
+                      2, "Waikato Te Awa", "assets/images/image2.jpg"),
+                  WaiataContent(
+                      3, "Tutira mai nga iwi", "assets/images/image2.jpg"),
+                  WaiataContent(
+                      4, "Pupuke Te Hihiri", "assets/images/image2.jpg"),
+                  WaiataContent(
+                      5, "I Te Whare Whakapiri", "assets/images/image2.jpg"),
                   WaiataContent(6, "Pua Te Kōwhai", "assets/images/image2.jpg"),
                 ],
               ),
