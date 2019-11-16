@@ -66,3 +66,4 @@
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 *.icloud
+**/ios/Flutter/App 2.framework
