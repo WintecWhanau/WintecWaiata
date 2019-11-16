@@ -43,21 +43,28 @@ class _LyricsState extends State < Lyrics > {
               child: Column(
                 children: < Widget > [
                   Container(
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.center,
                     child: Text(
                       WaiataAux.waiata.name,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: 22.0,
                         decoration: TextDecoration.underline,
                       ),
-                      textAlign: TextAlign.start,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-                      child: Text(
-                        words,
+                      child: Container(
+                        alignment: Alignment.center,
+                        child: Text(
+                          words,
+                          style: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                   ),
                 ],

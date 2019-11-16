@@ -46,34 +46,41 @@ class WaiataBrief extends StatelessWidget {
                 WaiataAux.waiata.name + " brief",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
+                  fontSize: 22.0,
                   decoration: TextDecoration.underline,
                 ),
+                textAlign: TextAlign.center,
               )
             ),
             Container(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                WaiataAux.waiata.brief
+                WaiataAux.waiata.brief,
+                style: TextStyle(
+                  fontSize: 18.0,
+                ),
               ),
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: < Widget > [
-            Expanded(
-              child: BriefButton("Vocal", '/waiataPlayback', 1),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: < Widget > [
+                Expanded(
+                  child: BriefButton("Vocal", '/waiataPlayback', 1),
+                ),
+                Expanded(
+                  child: BriefButton("Lyrics", '/waiataWords', 2),
+                ),
+                Expanded(
+                  child: BriefButton("Non vocal", '/waiataPlayback', 3),
+                ),
+              ],
             ),
-            Expanded(
-              child: BriefButton("Lyrics", '/waiataWords', 2),
-            ),
-            Expanded(
-              child: BriefButton("Non vocal", '/waiataPlayback', 3),
-            ),
-          ],
         ),
       ),
     );
