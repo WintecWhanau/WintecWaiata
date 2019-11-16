@@ -22,14 +22,17 @@ dependencies:
   # video_player: ^0.10.2+5
   chewie: ^0.9.8+1
   carousel_pro: ^1.0.0
+  #for loading their form within the app
+  webview_flutter: ^0.3.15+1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  #cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.7.4
+  url_launcher: ^5.2.5
 
 flutter_icons:
   ios: true
