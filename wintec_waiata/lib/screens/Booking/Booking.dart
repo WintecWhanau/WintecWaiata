@@ -14,16 +14,17 @@ class Booking extends StatefulWidget {
 
 class _BookingState extends State<Booking> {
 
+  //url for wintec form
   final String formUrl = "https://forms.office.com/Pages/ResponsePage.aspx?id=EGD7TUvCYESjHZ-rH1sSwsnqE-7D5LNDh5FiYN-6GHxUQzFFUFZPTE5TR1VDQ042UEVRWDVWUEpLSy4u&fbclid=IwAR25ULqLtx_-BapEnWr8mWKdyoc45nCBqsSyhvtmSfdbx_iN3ioravklJyw";
 
   @override
   Widget build(BuildContext context) {
-    return WebviewScaffold(
+    return WebviewScaffold(//flutter_webview_plugin implementation
       appBar: ApplicationBar(
         title: Text("Booking"),
       ),
       url: formUrl,
-      withJavascript: true,
+      withJavascript: true,//wintec form requires javascript
     );
   }
 }
