@@ -15,13 +15,20 @@ class WaiataContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.black,
       elevation: 2.0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(
+          color: Colors.yellow
+        ),
+      ),
       child: InkWell(
         onTap: () => initWaiata(context, index),
         child: Column(
-          children: <Widget>[
+          children: < Widget > [
             Expanded(
               child: Image(
+                fit: BoxFit.fill,
                 image: AssetImage(image),
               ),
             ),
@@ -29,7 +36,7 @@ class WaiataContent extends StatelessWidget {
               // color: Colors.black,
               child: Row(
                 //used to expand song name across entire bottom of card
-                children: <Widget>[
+                children: < Widget > [
                   Expanded(
                     child: FlatButton(
                       //only used a flat button for the styling
@@ -37,6 +44,9 @@ class WaiataContent extends StatelessWidget {
                       disabledTextColor: Colors.black,
                       child: Text(
                         title,
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -58,13 +68,13 @@ class WaiataContent extends StatelessWidget {
 
     //initialize static waita from json
     WaiataAux.waiata = new Waiata(
-        json[index]["name"],
-        json[index]["brief"],
-        json[index]["maoriWords"],
-        json[index]["englishWords"],
-        json[index]["thumbnailPath"],
-        json[index]["vocalPath"],
-        json[index]["nonVocalPath"]);
+      json[index]["name"],
+      json[index]["brief"],
+      json[index]["maoriWords"],
+      json[index]["englishWords"],
+      json[index]["thumbnailPath"],
+      json[index]["vocalPath"],
+      json[index]["nonVocalPath"]);
 
     //debug
     // print(WaiataAux.waiata.name + WaiataAux.waiata.brief);
