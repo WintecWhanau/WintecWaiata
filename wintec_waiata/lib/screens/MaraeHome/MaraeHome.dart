@@ -10,7 +10,7 @@ class MaraeHome extends StatelessWidget {
     return Scaffold(
       appBar: ApplicationBar(
         title: Text(
-          'TE KŌPŪ MĀNIA O KIRIKIRIROA',
+          "Te Kōpū Mānia o Kirikiriroa",
           style: TextStyle(
             fontSize: 18.0,
           ),
@@ -27,11 +27,12 @@ class MaraeHome extends StatelessWidget {
                 [
                   MaraeContent(
                       "Marae info", "assets/images/image2.jpg", "maraeInfo"),
-                  MaraeContent(
-                      "Carvings", "assets/images/image2.jpg", "protocls"),
+                  MaraeContent(//changed to marae info until complete
+                      "Carvings", "assets/images/image2.jpg", "maraeInfo"),
                   MaraeContent(
                       "Protocols", "assets/images/image2.jpg", 'protocols'),
-                  MaraeContent("Bookings", "assets/images/image2.jpg", "Marae"),
+                  MaraeContent(
+                    "Bookings", "assets/images/image2.jpg", "booking"),
                 ],
               ),
             ),

@@ -12,7 +12,7 @@ class MaraeInfo extends StatelessWidget {
     return Scaffold(
       appBar: ApplicationBar(
         title: Text(
-          "Te Kōpū Mānia o Kirikiriroa",
+          "Te Kōpū Mānia o Kirikiriroa info",
           style: TextStyle(
             fontSize: 18.0,
           ),
@@ -25,11 +25,11 @@ class MaraeInfo extends StatelessWidget {
               //for better experience for different screen size
               height: MediaQuery.of(context).size.height * 0.3,
               child: Carousel(
-                images: [
-                  NetworkImage(
-                      'https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                  NetworkImage(
-                      'https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+                images: [//changed images from network to asset
+                  AssetImage(
+                      'assets/images/image2.jpg'),
+                  AssetImage(
+                      'assets/images/image2.jpg'),
                 ],
                 indicatorBgPadding: 5.0,
               ),

@@ -11,7 +11,7 @@ class Protocols extends StatelessWidget {
     return Scaffold(
       appBar: ApplicationBar(
         title: Text(
-          "Te Kōpū Mānia o Kirikiriroa",
+          "Protocols",
           style: TextStyle(
             fontSize: 18.0,
           ),
