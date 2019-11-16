@@ -20,7 +20,7 @@ class MaraeContent extends StatelessWidget {
         elevation: 2.0,
         //use InkWell is better practice
         child: InkWell(
-          onTap: () => changeRoute(context),
+          onTap: () => changeRoute(context, page),
           child: Column(
             children: <Widget>[
               Expanded(
@@ -54,7 +54,7 @@ class MaraeContent extends StatelessWidget {
     );
   }
 
-  changeRoute(context) {
-    Navigator.of(context).pushNamed('/waiataInfo');
+  changeRoute(context, String page) {
+    Navigator.of(context).pushNamed('/$page');
   }
 }

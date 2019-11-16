@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:wintec_waiata/shared/WaiataAux.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class BriefButton extends StatelessWidget {
+class MoreInfoButton extends StatelessWidget {
   final String title;
-  final String page;
+  final String link;
 
   //TODO: Find a better implementation?
-  final int index; //used to see which button is pressed
 
-  const BriefButton(this.title, this.page, this.index, {Key key})
-      : super(key: key);
+  const MoreInfoButton(this.title, this.link, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +23,7 @@ class BriefButton extends StatelessWidget {
             ),
             side: BorderSide(color: Colors.yellow)),
         onPressed: () {
-          switch (index) {
-            case 1:
-              WaiataAux.waiata.vocal = true;
-              break;
-            case 2:
-              break;
-            case 3:
-              WaiataAux.waiata.vocal = false;
-              break;
-            default:
-              break;
-          }
-          Navigator.of(context).pushNamed(page);
+          _launchURL(link);
         },
         child: Text(
           title,
@@ -47,5 +33,15 @@ class BriefButton extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  //for launching external link
+  _launchURL(String link) async {
+    String url = link;
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
