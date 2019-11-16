@@ -11,15 +11,27 @@ class MaraeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.black,
       elevation: 2.0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: Colors.yellow),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
       //use InkWell is better practice
       child: InkWell(
         onTap: () => changeRoute(context, page),
         child: Column(
           children: < Widget > [
             Expanded(
-              child: Image(
-                image: AssetImage(image),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(8.0),
+                  topRight: Radius.circular(8.0),
+                ),
+                child: Image(
+                  fit: BoxFit.fill,
+                  image: AssetImage(image),
+                ),
               ),
             ),
             Container(
@@ -35,6 +47,9 @@ class MaraeContent extends StatelessWidget {
                       child: Text(
                         title,
                         textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
                       ),
                     ),
                   )
@@ -48,6 +63,89 @@ class MaraeContent extends StatelessWidget {
   }
 
   changeRoute(context, String page) {
-    Navigator.of(context).pushNamed('/$page');
+    if (page.compareTo('booking') == 0) {
+      authenticateBooking(context).then((onValue) {
+        if (onValue) {
+          Navigator.of(context).pushNamed('/$page');
+        } else {
+          SnackBar wrongPassword = SnackBar(
+            content: Text("Incorrect password. Please try again."),
+            duration: Duration(seconds: 3),
+          );
+          Scaffold.of(context).showSnackBar(wrongPassword);
+        }
+      });
+    } else {
+      Navigator.of(context).pushNamed('/$page');
+    }
+  }
+
+  //create a dialog for user to enter provided password
+  //then authenticate user with a submit button. returning a bool back to changeRoute
+  Future < bool > authenticateBooking(context) {
+
+    String password = "password";
+    TextEditingController _controller = TextEditingController();
+
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Please provide password"),
+          content: Container(
+            height: MediaQuery.of(context).size.height * 0.25,
+            child: Column(
+              children: < Widget > [
+                Text(
+                  "Please note, only Wintec staff can make official bookings and will be provided with an authentication key.\n\nPlease contact marae staff for more information.",
+                  style: TextStyle(fontSize: 12),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock),
+                        labelText: 'Password',
+                        // hintText: "Password",
+                      ),
+                      controller: _controller,
+                    ),
+                ),
+              ],
+            ),
+          ),
+          actions: < Widget > [
+            MaterialButton(
+              elevation: 5,
+              child: Text(
+                "Submit",
+                style: TextStyle(
+                  color: Colors.black
+                ),
+              ),
+              onPressed: () {
+                if (_controller.text.toString().compareTo(password) == 0) {
+                  Navigator.of(context).pop(true);
+                } else {
+                  Navigator.of(context).pop(false);
+                }
+              },
+            ),
+            MaterialButton(
+              elevation: 5,
+              child: Text(
+                "Cancel",
+                style: TextStyle(
+                  color: Colors.black
+                ),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            )
+          ],
+        );
+      }
+    );
   }
 }
