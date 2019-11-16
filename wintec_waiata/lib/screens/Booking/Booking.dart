@@ -1,7 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:wintec_waiata/shared/ApplicationBar.dart';
 
 class Booking extends StatefulWidget {
@@ -16,21 +15,15 @@ class Booking extends StatefulWidget {
 class _BookingState extends State<Booking> {
 
   final String formUrl = "https://forms.office.com/Pages/ResponsePage.aspx?id=EGD7TUvCYESjHZ-rH1sSwsnqE-7D5LNDh5FiYN-6GHxUQzFFUFZPTE5TR1VDQ042UEVRWDVWUEpLSy4u&fbclid=IwAR25ULqLtx_-BapEnWr8mWKdyoc45nCBqsSyhvtmSfdbx_iN3ioravklJyw";
-  final Completer<WebViewController> _controller = Completer<WebViewController>();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WebviewScaffold(
       appBar: ApplicationBar(
         title: Text("Booking"),
       ),
-      body: WebView(
-        initialUrl: formUrl,
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController){
-          _controller.complete(webViewController);
-        },
-      ),
+      url: formUrl,
+      withJavascript: true,
     );
   }
 }
