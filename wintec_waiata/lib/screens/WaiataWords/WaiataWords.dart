@@ -17,6 +17,7 @@ class _WaiataWordsState extends State < WaiataWords > {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ApplicationBar(
+        context: context,
         title: Text(
           WaiataAux.waiata.name + " lyrics",
           style: TextStyle(

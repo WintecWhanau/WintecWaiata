@@ -10,6 +10,7 @@ class Protocols extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ApplicationBar(
+        context: context,
         title: Text(
           "Protocols",
           style: TextStyle(
