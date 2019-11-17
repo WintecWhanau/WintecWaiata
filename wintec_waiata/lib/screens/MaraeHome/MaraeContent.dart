@@ -65,8 +65,8 @@ class MaraeContent extends StatelessWidget {
 
   //check if booking button was pressed. Take value from authenticateBooking() and either show incorrect or allow access to page
   checkButton(BuildContext context) {
-    if (page.compareTo('booking') == 0) {
-      getAccess().then((onValue){
+    if (page.compareTo('booking') == 0) { //booking has been selected
+      getAccess().then((onValue){ //conditional statements based on saved preference return
         if(onValue == null || !onValue){
           initAuth(context);
         }
@@ -74,24 +74,27 @@ class MaraeContent extends StatelessWidget {
           changeRoute(context);
         }
       });
-    } else {
+    } else {//booking not selected continue normally
       changeRoute(context);
     }
   }
 
   initAuth(BuildContext context){
     authenticateBooking(context).then((onValue) {
-        if (onValue) { //returned true allow access
-          changeRoute(context);
-        } 
-        else { //returned false deny access and show SnackBar
-          SnackBar wrongPassword = SnackBar(
-            content: Text("Incorrect password. Please try again."),
-            duration: Duration(seconds: 3),
-          );
-          Scaffold.of(context).showSnackBar(wrongPassword);
-        }
-      });
+      if(onValue == null){
+        return;
+      }
+      if (onValue) { //returned true allow access
+        changeRoute(context);
+      } 
+      else { //returned false deny access and show SnackBar
+        SnackBar wrongPassword = SnackBar(
+          content: Text("Incorrect password. Please try again."),
+          // duration: Duration(seconds: 2),
+        );
+        Scaffold.of(context).showSnackBar(wrongPassword);
+      }
+    });
   }
 
   //check if user has already filled out authentication form correctly
@@ -124,27 +127,40 @@ class MaraeContent extends StatelessWidget {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text("Please provide password"),
+          title: Text("Enter password"),
+          elevation: 20,
           content: Container(
-            height: MediaQuery.of(context).size.height * 0.25,
-            child: Column(
-              children: < Widget > [
-                Text(
-                  "Please note, only Wintec staff can make official bookings and will be provided with an authentication key.\n\nPlease contact marae staff for more information.",
-                  style: TextStyle(fontSize: 12),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.lock),
-                        labelText: 'Password',
-                        // hintText: "Password",
-                      ),
-                      controller: _controller,
+            // height: MediaQuery.of(context).size.height * 0.25,
+            child: SingleChildScrollView(
+              child: Column(
+                children: < Widget > [
+                  TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      labelText: 'Password',
+                      // hintText: "Password",
                     ),
-                ),
-              ],
+                    controller: _controller,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Text(
+                      "Only Wintec staff can make official bookings and will be provided with an authentication key.",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Please contact marae staff for more information.",
+                        style: TextStyle(fontSize: 9),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           actions: < Widget > [
