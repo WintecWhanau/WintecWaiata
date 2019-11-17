@@ -108,7 +108,7 @@ class MaraeContent extends StatelessWidget {
   Future<bool> setAccess() async{
     SharedPreferences preference = await SharedPreferences.getInstance();
     preference.setBool('allowed', true);
-    return preference.getBool('allowed');
+    return true;
   }
 
   //switch to desired page
