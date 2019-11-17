@@ -33,7 +33,7 @@ class MaraeHome extends StatelessWidget {
                       "assets/images/image2.jpg",
                       "carvings"),
                   MaraeContent(
-                      "Protocols", "assets/images/image2.jpg", 'protocols'),
+                    "Protocols", "assets/images/image2.jpg", 'protocols'),
                   MaraeContent(
                       "Bookings", "assets/images/image2.jpg", "booking"),
                 ],
