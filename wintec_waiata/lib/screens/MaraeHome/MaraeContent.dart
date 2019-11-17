@@ -158,9 +158,8 @@ class MaraeContent extends StatelessWidget {
               ),
               onPressed: () {
                 if (_controller.text.toString().compareTo(password) == 0) {
-                  setAccess().then((onValue){
-                    Navigator.of(context).pop(true);
-                  });
+                  setAccess();
+                  Navigator.of(context).pop(true);
                 } else {
                   Navigator.of(context).pop(false);
                 }
