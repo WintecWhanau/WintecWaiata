@@ -81,7 +81,7 @@ class MaraeContent extends StatelessWidget {
 
   initAuth(BuildContext context){
     authenticateBooking(context).then((onValue) {
-      if(onValue == null){
+      if(onValue == null){ //cancel button returns null
         return;
       }
       if (onValue) { //returned true allow access
@@ -105,10 +105,9 @@ class MaraeContent extends StatelessWidget {
   }
 
   //set a shared preference. Used to determine if authentication window should show
-  Future<bool> setAccess() async{
+  setAccess() async{
     SharedPreferences preference = await SharedPreferences.getInstance();
     preference.setBool('allowed', true);
-    return true;
   }
 
   //switch to desired page
