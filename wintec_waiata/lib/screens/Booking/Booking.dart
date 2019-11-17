@@ -21,6 +21,7 @@ class _BookingState extends State<Booking> {
   Widget build(BuildContext context) {
     return WebviewScaffold(//flutter_webview_plugin implementation
       appBar: ApplicationBar(
+        context: context,
         title: Text("Booking"),
       ),
       url: formUrl,

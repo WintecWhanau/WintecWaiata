@@ -12,6 +12,7 @@ class WaiataHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ApplicationBar(
+        context: context,
         title: Text(
           "Waiata",
           style: TextStyle(
