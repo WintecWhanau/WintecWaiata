@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wintec_waiata/screens/Booking/Booking.dart';
+import 'package:wintec_waiata/screens/Carvings/carvings.dart';
 import 'package:wintec_waiata/screens/Home/Home.dart';
 import 'package:wintec_waiata/screens/MaraeInfo/MaraeInfo.dart';
 import 'package:wintec_waiata/screens/Protocols/Protocols.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/maraeInfo': (context) => MaraeInfo(),
         '/protocols': (context) => Protocols(),
         '/booking': (context) => Booking(),
+        '/carvings': (context) => Carvings()
       },
     );
   }

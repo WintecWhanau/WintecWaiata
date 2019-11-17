@@ -26,13 +26,16 @@ class MaraeHome extends StatelessWidget {
               delegate: SliverChildListDelegate(
                 [
                   MaraeContent(
-                    "Marae info", "assets/images/image2.jpg", "maraeInfo"),
-                  MaraeContent(//changed to marae info until complete
-                    "Carvings", "assets/images/image2.jpg", "maraeInfo"),
+                      "Marae info", "assets/images/image2.jpg", "maraeInfo"),
+                  MaraeContent(
+                      //changed to marae info until complete
+                      "Carvings",
+                      "assets/images/image2.jpg",
+                      "carvings"),
                   MaraeContent(
                     "Protocols", "assets/images/image2.jpg", 'protocols'),
                   MaraeContent(
-                    "Bookings", "assets/images/image2.jpg", "booking"),
+                      "Bookings", "assets/images/image2.jpg", "booking"),
                 ],
               ),
             ),
