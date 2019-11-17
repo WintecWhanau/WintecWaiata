@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MaraeContent extends StatelessWidget {
   final String title;
@@ -19,7 +20,7 @@ class MaraeContent extends StatelessWidget {
       ),
       //use InkWell is better practice
       child: InkWell(
-        onTap: () => changeRoute(context, page),
+        onTap: () => checkButton(context),
         child: Column(
           children: < Widget > [
             Expanded(
@@ -62,26 +63,61 @@ class MaraeContent extends StatelessWidget {
     );
   }
 
-  changeRoute(context, String page) {
-    if (page.compareTo('booking') == 0) {
-      authenticateBooking(context).then((onValue) {
-        if (onValue) {
-          Navigator.of(context).pushNamed('/$page');
-        } else {
-          SnackBar wrongPassword = SnackBar(
-            content: Text("Incorrect password. Please try again."),
-            duration: Duration(seconds: 3),
-          );
-          Scaffold.of(context).showSnackBar(wrongPassword);
+  //check if booking button was pressed. Take value from authenticateBooking() and either show incorrect or allow access to page
+  checkButton(BuildContext context) {
+    if (page.compareTo('booking') == 0) { //booking has been selected
+      getAccess().then((onValue){ //conditional statements based on saved preference return
+        if(onValue == null || !onValue){
+          initAuth(context);
+        }
+        else if(onValue){
+          changeRoute(context);
         }
       });
-    } else {
-      Navigator.of(context).pushNamed('/$page');
+    } else {//booking not selected continue normally
+      changeRoute(context);
     }
   }
 
+  initAuth(BuildContext context){
+    authenticateBooking(context).then((onValue) {
+      if(onValue == null){
+        return;
+      }
+      if (onValue) { //returned true allow access
+        changeRoute(context);
+      } 
+      else { //returned false deny access and show SnackBar
+        SnackBar wrongPassword = SnackBar(
+          content: Text("Incorrect password. Please try again."),
+          // duration: Duration(seconds: 2),
+        );
+        Scaffold.of(context).showSnackBar(wrongPassword);
+      }
+    });
+  }
+
+  //check if user has already filled out authentication form correctly
+  Future<bool> getAccess() async{
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    bool allowed = preference.getBool('allowed');
+    return allowed;
+  }
+
+  //set a shared preference. Used to determine if authentication window should show
+  Future<bool> setAccess() async{
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    preference.setBool('allowed', true);
+    return preference.getBool('allowed');
+  }
+
+  //switch to desired page
+  changeRoute(BuildContext context){
+    Navigator.of(context).pushNamed('/$page');
+  }
+
   //create a dialog for user to enter provided password
-  //then authenticate user with a submit button. returning a bool back to changeRoute
+  //then authenticate user with a submit button. returning a bool back to checkButton
   Future < bool > authenticateBooking(context) {
 
     String password = "password";
@@ -91,27 +127,40 @@ class MaraeContent extends StatelessWidget {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text("Please provide password"),
+          title: Text("Enter password"),
+          elevation: 20,
           content: Container(
-            height: MediaQuery.of(context).size.height * 0.25,
-            child: Column(
-              children: < Widget > [
-                Text(
-                  "Please note, only Wintec staff can make official bookings and will be provided with an authentication key.\n\nPlease contact marae staff for more information.",
-                  style: TextStyle(fontSize: 12),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.lock),
-                        labelText: 'Password',
-                        // hintText: "Password",
-                      ),
-                      controller: _controller,
+            // height: MediaQuery.of(context).size.height * 0.25,
+            child: SingleChildScrollView(
+              child: Column(
+                children: < Widget > [
+                  TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      labelText: 'Password',
+                      // hintText: "Password",
                     ),
-                ),
-              ],
+                    controller: _controller,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Text(
+                      "Only Wintec staff can make official bookings and will be provided with an authentication key.",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Please contact marae staff for more information.",
+                        style: TextStyle(fontSize: 9),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           actions: < Widget > [
@@ -125,6 +174,7 @@ class MaraeContent extends StatelessWidget {
               ),
               onPressed: () {
                 if (_controller.text.toString().compareTo(password) == 0) {
+                  setAccess();
                   Navigator.of(context).pop(true);
                 } else {
                   Navigator.of(context).pop(false);

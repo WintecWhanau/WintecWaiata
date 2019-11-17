@@ -24,6 +24,8 @@ dependencies:
   carousel_pro: ^1.0.0
   #load website within app. with keyboard
   flutter_webview_plugin: ^0.3.9+1
+  #persistance for booking authentication
+  shared_preferences: ^0.5.4+5
   #expandable cards
   expandable: ^3.0.1
   # The following adds the Cupertino Icons font to your application.
