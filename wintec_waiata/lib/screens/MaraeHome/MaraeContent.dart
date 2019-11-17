@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MaraeContent extends StatelessWidget {
   final String title;
@@ -19,7 +20,7 @@ class MaraeContent extends StatelessWidget {
       ),
       //use InkWell is better practice
       child: InkWell(
-        onTap: () => changeRoute(context, page),
+        onTap: () => checkButton(context),
         child: Column(
           children: < Widget > [
             Expanded(
@@ -62,12 +63,28 @@ class MaraeContent extends StatelessWidget {
     );
   }
 
-  changeRoute(context, String page) {
+  //check if booking button was pressed. Take value from authenticateBooking() and either show incorrect or allow access to page
+  checkButton(BuildContext context) {
     if (page.compareTo('booking') == 0) {
-      authenticateBooking(context).then((onValue) {
-        if (onValue) {
-          Navigator.of(context).pushNamed('/$page');
-        } else {
+      getAccess().then((onValue){
+        if(onValue == null || !onValue){
+          initAuth(context);
+        }
+        else if(onValue){
+          changeRoute(context);
+        }
+      });
+    } else {
+      changeRoute(context);
+    }
+  }
+
+  initAuth(BuildContext context){
+    authenticateBooking(context).then((onValue) {
+        if (onValue) { //returned true allow access
+          changeRoute(context);
+        } 
+        else { //returned false deny access and show SnackBar
           SnackBar wrongPassword = SnackBar(
             content: Text("Incorrect password. Please try again."),
             duration: Duration(seconds: 3),
@@ -75,13 +92,29 @@ class MaraeContent extends StatelessWidget {
           Scaffold.of(context).showSnackBar(wrongPassword);
         }
       });
-    } else {
-      Navigator.of(context).pushNamed('/$page');
-    }
+  }
+
+  //check if user has already filled out authentication form correctly
+  Future<bool> getAccess() async{
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    bool allowed = preference.getBool('allowed');
+    return allowed;
+  }
+
+  //set a shared preference. Used to determine if authentication window should show
+  Future<bool> setAccess() async{
+    SharedPreferences preference = await SharedPreferences.getInstance();
+    preference.setBool('allowed', true);
+    return preference.getBool('allowed');
+  }
+
+  //switch to desired page
+  changeRoute(BuildContext context){
+    Navigator.of(context).pushNamed('/$page');
   }
 
   //create a dialog for user to enter provided password
-  //then authenticate user with a submit button. returning a bool back to changeRoute
+  //then authenticate user with a submit button. returning a bool back to checkButton
   Future < bool > authenticateBooking(context) {
 
     String password = "password";
@@ -125,7 +158,9 @@ class MaraeContent extends StatelessWidget {
               ),
               onPressed: () {
                 if (_controller.text.toString().compareTo(password) == 0) {
-                  Navigator.of(context).pop(true);
+                  setAccess().then((onValue){
+                    Navigator.of(context).pop(true);
+                  });
                 } else {
                   Navigator.of(context).pop(false);
                 }
