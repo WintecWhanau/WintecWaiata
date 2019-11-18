@@ -1,7 +1,8 @@
 //TODO
 //this is a place holder for splash screen
 import 'dart:async';
-
+import 'dart:io';
+import 'dart:ui' as prefix0;
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,6 +12,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
+
   AnimationController _animationController;
   Animation<double> _animation;
 
@@ -29,8 +31,8 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
 
     Timer(
-      Duration(seconds: 3),
-      () {
+      Duration(milliseconds: 4000),
+          () {
         Navigator.of(context).pushReplacementNamed('/home');
       },
     );
@@ -38,15 +40,35 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      backgroundColor: Color.fromRGBO(255, 215, 0, 1),
-      body: Center(
-        child: Text(
-          "Splash place holder",
-          style: TextStyle(fontSize: 50, color: Colors.white),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/splash.gif"),
+            fit: BoxFit.cover,
+          )
         ),
-      ),
+      )
     );
   }
+
+//  @override
+//  Widget build(BuildContext context) {
+//    return Scaffold(
+//      body: Container(
+//        color: Colors.amber,
+//        child: FadeTransition(
+//            opacity: _animation,
+//            child: Container(
+//              foregroundDecoration: BoxDecoration(
+//                  image: DecorationImage(
+//                    image: AssetImage("assets/images/splashstill.png"),
+//                  )
+//              ),
+//            )
+//        ),
+//      ),
+//    );
+//  }
+
 }
