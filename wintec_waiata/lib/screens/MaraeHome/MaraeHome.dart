@@ -31,22 +31,22 @@ class MaraeHome extends StatelessWidget {
               children: <Widget>[
                 MaraeContent(
                   "Marae info", 
-                  "assets/images/image2.jpg", 
+                  "assets/images/image.png", 
                   "maraeInfo"
                 ),
                 MaraeContent(
                   "Carvings",
-                  "assets/images/image2.jpg",
+                  "assets/images/image.png",
                   "carvings"
                 ),
                 MaraeContent(
                   "Protocols", 
-                  "assets/images/image2.jpg", 
+                  "assets/images/image.png", 
                   "protocols"
                 ),
                 MaraeContent(
                   "Bookings", 
-                  "assets/images/image2.jpg", 
+                  "assets/images/image.png", 
                   "booking"
                 ),
               ],
