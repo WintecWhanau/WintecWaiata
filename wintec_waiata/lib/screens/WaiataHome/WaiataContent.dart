@@ -27,15 +27,17 @@ class WaiataContent extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(8.0),
-                  topRight: Radius.circular(8.0),
-                ),
-                child: Image(
-                  fit: BoxFit.fill,
-                  image: AssetImage(image),
-                ),
-              ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(8.0),
+                    topRight: Radius.circular(8.0),
+                  ),
+                  child: Hero(
+                    tag: title,
+                    child: Image(
+                      fit: BoxFit.fill,
+                      image: AssetImage(image),
+                    ),
+                  )),
             ),
             Container(
               // color: Colors.black,

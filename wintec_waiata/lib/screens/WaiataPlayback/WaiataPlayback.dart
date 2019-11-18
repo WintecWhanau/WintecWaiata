@@ -8,17 +8,13 @@ import 'package:wintec_waiata/shared/WaiataAux.dart';
 //TODO: Videos will change based on their given paths in the json file. assets/json/waiata.json
 
 class WaiataPlayback extends StatefulWidget {
-  
-  WaiataPlayback({
-    Key key
-  }): super(key: key);
+  WaiataPlayback({Key key}) : super(key: key);
 
   @override
   _WaiataPlaybackState createState() => _WaiataPlaybackState();
 }
 
-class _WaiataPlaybackState extends State < WaiataPlayback > {
-
+class _WaiataPlaybackState extends State<WaiataPlayback> {
   VideoPlayerController _controller;
   ChewieController chewieController;
   Chewie playerWidget;
@@ -26,12 +22,10 @@ class _WaiataPlaybackState extends State < WaiataPlayback > {
 
   @override
   void initState() {
-
-    if(WaiataAux.waiata.vocal){
+    if (WaiataAux.waiata.vocal) {
       videoPath = WaiataAux.waiata.vocalPath;
       print(videoPath);
-    }
-    else{
+    } else {
       videoPath = WaiataAux.waiata.nonVocalPath;
       print(videoPath);
     }
@@ -43,7 +37,7 @@ class _WaiataPlaybackState extends State < WaiataPlayback > {
     chewieController = ChewieController(
       videoPlayerController: _controller,
       aspectRatio: 16 / 9,
-      autoPlay: true,
+      autoPlay: false,
       looping: false,
       allowedScreenSleep: false,
     );
@@ -70,7 +64,7 @@ class _WaiataPlaybackState extends State < WaiataPlayback > {
         ),
       ),
       body: Column(
-        children: < Widget > [
+        children: <Widget>[
           Chewie(
             controller: chewieController,
           ),

@@ -52,7 +52,7 @@ class Protocols extends StatelessWidget {
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.only(left: 10, top: 10),
               child: Text(
-                'Wharenui - Te Kakano a te Kaahu',
+                'Wharenui - Te Kākano a te Kaahu',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                     fontSize: 16.0,

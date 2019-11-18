@@ -4,7 +4,6 @@ import 'package:wintec_waiata/shared/ApplicationBar.dart';
 import 'package:wintec_waiata/shared/WaiataAux.dart';
 
 class WaiataBrief extends StatelessWidget {
-
   WaiataBrief();
 
   @override
@@ -22,23 +21,17 @@ class WaiataBrief extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
-          children: < Widget > [
-            Stack( //thumbnail with text overlayed
-              alignment: Alignment.center,
-              children: < Widget > [
-                Image(
+          children: <Widget>[
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.35,
+              width: MediaQuery.of(context).size.width,
+              child: Hero(
+                tag: WaiataAux.waiata.name,
+                child: Image(
                   fit: BoxFit.fill,
                   image: AssetImage(WaiataAux.waiata.thumbnailPath),
                 ),
-                Text(
-                  WaiataAux.waiata.name,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25.0,
-                  ),
-                ),
-              ],
+              ),
             ),
             Container(
               alignment: Alignment.centerLeft,
@@ -51,7 +44,7 @@ class WaiataBrief extends StatelessWidget {
                   decoration: TextDecoration.underline,
                 ),
                 textAlign: TextAlign.center,
-              )
+              ),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
@@ -68,20 +61,20 @@ class WaiataBrief extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         child: Padding(
           padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: < Widget > [
-                Expanded(
-                  child: BriefButton("Vocal", '/waiataPlayback', 1),
-                ),
-                Expanded(
-                  child: BriefButton("Lyrics", '/waiataWords', 2),
-                ),
-                Expanded(
-                  child: BriefButton("Non vocal", '/waiataPlayback', 3),
-                ),
-              ],
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Expanded(
+                child: BriefButton("Vocal", '/waiataPlayback', 1),
+              ),
+              Expanded(
+                child: BriefButton("Lyrics", '/waiataWords', 2),
+              ),
+              Expanded(
+                child: BriefButton("Non vocal", '/waiataPlayback', 3),
+              ),
+            ],
+          ),
         ),
       ),
     );
