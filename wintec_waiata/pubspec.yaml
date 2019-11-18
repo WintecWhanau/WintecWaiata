@@ -57,8 +57,10 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/waiata/
     - assets/json/
-    - assets/videos/
+    - assets/videos/vocal/
+    - assets/videos/nonVocal/
 
   # To add assets to your application, add an assets section, like this:
 

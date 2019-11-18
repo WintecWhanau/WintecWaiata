@@ -29,24 +29,44 @@ class WaiataHome extends StatelessWidget {
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               delegate: SliverChildListDelegate(
                 [
-                  //TODO: Implement a scalable way of adding waiata cards. Once instantiated it is scalable but find a better solution to initialize each card.
-                  //TODO: Add in Waiata info for Tutira mai nga iwi
-                  //TODO: Add in waiata images and videos
+                  //TODO: Add in waiata videos
 
                   //initialize waiata cards. int constructor is index for json assets/json/waiata.json
                   WaiataContent(
-                      0, "E Kore Koe E Ngaro", "assets/images/image2.jpg"),
-                  WaiataContent(1, "He Maimai Aroha nā Tāwhiao",
-                      "assets/images/image2.jpg"),
+                    0, 
+                    "E Kore Koe E Ngaro", 
+                    "assets/images/waiata/WaiataIndex0.jpg"
+                  ),
                   WaiataContent(
-                      2, "Waikato Te Awa", "assets/images/image2.jpg"),
+                    1, 
+                    "He Maimai Aroha nā Tāwhiao",
+                    "assets/images/waiata/WaiataIndex1.jpg"
+                  ),
                   WaiataContent(
-                      3, "Tutira mai nga iwi", "assets/images/image2.jpg"),
+                    2, 
+                    "Waikato Te Awa", 
+                    "assets/images/waiata/WaiataIndex2.jpg"
+                  ),
                   WaiataContent(
-                      4, "Pupuke Te Hihiri", "assets/images/image2.jpg"),
+                    3, 
+                    "Tutira mai nga iwi", 
+                    "assets/images/waiata/WaiataIndex3.jpg"
+                  ),
                   WaiataContent(
-                      5, "I Te Whare Whakapiri", "assets/images/image2.jpg"),
-                  WaiataContent(6, "Pua Te Kōwhai", "assets/images/image2.jpg"),
+                    4, 
+                    "Pupuke Te Hihiri", 
+                    "assets/images/waiata/WaiataIndex4.jpg"
+                  ),
+                  WaiataContent(
+                    5, 
+                    "I Te Whare Whakapiri", 
+                    "assets/images/waiata/WaiataIndex5.jpg"
+                  ),
+                  WaiataContent(
+                    6, 
+                    "Pua Te Kōwhai", 
+                    "assets/images/waiata/WaiataIndex6.jpg"
+                  ),
                 ],
               ),
             ),
