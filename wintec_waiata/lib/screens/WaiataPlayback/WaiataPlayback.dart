@@ -37,7 +37,7 @@ class _WaiataPlaybackState extends State<WaiataPlayback> {
     chewieController = ChewieController(
       videoPlayerController: _controller,
       aspectRatio: 16 / 9,
-      autoPlay: false,
+      autoPlay: true,
       looping: false,
       allowedScreenSleep: false,
     );
