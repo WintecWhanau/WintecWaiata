@@ -9,7 +9,13 @@ import 'package:wintec_waiata/screens/WaiataBrief/WaiataBrief.dart';
 import 'package:wintec_waiata/screens/WaiataPlayback/WaiataPlayback.dart';
 import 'package:wintec_waiata/screens/WaiataWords/WaiataWords.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  //fix the screen orientation
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
+  runApp(MyApp());
+}
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
