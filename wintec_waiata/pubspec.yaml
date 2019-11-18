@@ -59,6 +59,7 @@ flutter:
     - assets/images/
     - assets/images/waiata/
     - assets/json/
+    - assets/videos/
     - assets/videos/vocal/
     - assets/videos/nonVocal/
 
