@@ -24,7 +24,11 @@ class Protocols extends StatelessWidget {
             SizedBox(
               //for better experience for different screen size
               height: MediaQuery.of(context).size.height * 0.3,
-              child: Image.asset(InfoString.protocolImage),
+              width: MediaQuery.of(context).size.width,
+              child: Image(
+                fit: BoxFit.fill,
+                image: AssetImage(InfoString.protocolImage),
+              ),
             ),
             Container(
               alignment: Alignment.centerLeft,
