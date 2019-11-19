@@ -13,10 +13,11 @@ import 'package:wintec_waiata/screens/WaiataWords/WaiataWords.dart';
 
 void main() {
   //wait until setPreferredOrientations is done and then start the app
- SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-    .then((_) {
-      runApp(new MyApp());
-    });
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(MyApp());
+  });
 }
 
 /// This Widget is the main application widget.

@@ -98,4 +98,8 @@ class InfoString {
       'The taniwha Tuheitia is carved on the window lintel (kōrupe) above the front window of Te Kākano a te Kaahu, along with ngao matariki and manaia designs.\n'
       'Tuheitia holds guardianship of the Waipa river and was regarded with awe and respect.';
   static final String windowLintelsImage = 'assets/images/windowLintels.jpg';
+
+  static final String infoImg = 'assets/images/maraeInfo.jpg';
+  static final String infoImg1 = 'assets/images/maraeInfo1.jpg';
+  static final String infoImg2 = 'assets/images/maraeInfo2.jpg';
 }
