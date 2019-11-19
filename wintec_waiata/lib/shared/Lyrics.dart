@@ -61,7 +61,7 @@ class _LyricsState extends State < Lyrics > {
                         child: Text(
                           words,
                           style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                           ),
                           textAlign: TextAlign.center,
                         ),

@@ -14,8 +14,8 @@
         "maoriWords": "Ka mātakitaki iho au ki te riu o Waikato\nAnō nei hei kapo kau ake māku\nKi te kapu o taku ringa,\nKa whakamiri noa I tōna aratau,\nE tia nei he tupu pua hou.\n\nKia hiwa ake au I te tihi o Pirongia,\nInā hei toronga whakaruruhau mōna\nKi tōku tauawhirotanga.\n\nAnā! Te ngoto o tōna ngāwhā\nI ōna uma kīhai I ārikarika\nA Maungatautari, a Maungakawa,\nŌku puke maunga, ngā taonga tuku iho\nHoki ake nei au ki tōku awa koiora\nMe ōna pikonga He kura tangihia o te mātāmuri.\n\nE whakawhiti atu ai I te kōpū mānia\nO Kirikiriroa\nMe ōna māra kai, te ngāwhā whakatupu\nAke o te whenua mōmona,\nHei kawe ki Ngāruawāhia,\nTe huinga o te tangata.\nArā, te pae haumako, hei okiokinga mō\nTaku upoko,\nHei tirohanga atu mā raro I ngā hūhā\nO Taupiri.\n\nKei reira rā, kei te oroko hanganga o te\nTangata\nWāhia te tungaroa o te whare,\nTe whakaputanga mō te Kīngi.",
         "englishWords": "I look down on the valley of Waikato,\nAs though to hold it in the hollow of my hand\nAnd caress its beauty\nLike some tender verdant thing.\n\nI reach out from the top of Pirongia\nAs though to cover and protect its\nSubstance with my own.\n\nSee how it bursts through the full bosoms\nOf Maungatautari and Maungakawa,\nHills of my inheritance\nThe river of life, each curve more beautiful\nThan the last.\n\nCrossing the smooth belly of Kirikiriroa,\nIts gardens bursting with fullness of the rich\nEarth towards the meeting place at\nNgāruawāhia.\n\nThere on the fertile mound I would rest\nMy head\nAnd look through the thighs of\nTaupiri\n\nThere at the place of all creation\nLet the King come forth.",
         "thumbnailPath": "assets/images/waiata/WaiataIndex1.jpg",
-        "vocalPath": "assets/videos/video.mp4",
-        "nonVocalPath": "assets/videos/video2.mp4"
+        "vocalPath": "assets/videos/vocal/He_Maimai_Aroha_Vocal.mp4",
+        "nonVocalPath": "assets/videos/nonVocal/He_Maimai_Aroha_Karaoke.mp4"
     },
     {
         "name": "Waikato Te Awa",
@@ -24,7 +24,7 @@
         "englishWords": "Waikato te awa\nDip in the water\nAs it surges at the mouth\nWaikato is the river\nAt every bend there lives\nA chief.\n\nBe careful lest you capsize\nFor the currents are strong\nIn the Waikato\nFix your gaze on the distance\nWhere Taupiri is the mountain\nAnd Pōtatau the man.\n\nPaddle your canoe to Ngāruawāhia\nTo Tūrangawaewae\nThe heart of the kingdom\nWhere Matutaera finished his lament\nAlas, let me grieve also",
         "thumbnailPath": "assets/images/waiata/WaiataIndex2.jpg",
         "vocalPath": "assets/videos/vocal/Waikato_Te_Awa_Vocal.mp4",
-        "nonVocalPath": "assets/videos/video2.mp4"
+        "nonVocalPath": "assets/videos/nonVocal/Waikato_Te_Awa_Karaoke.mp4"
     },
     {
         "name": "Tutira mai nga iwi",
@@ -33,7 +33,7 @@
         "englishWords": "Line up together, people\nAll of us, all of us.\nStand in rows, people\nAll of us, all of us.\nSeek after knowledge\nAnd love of others everybody\nBe really virtuous And stay united.\nAll of us, all of us.\n\nLine up together, people\nAll of us, all of us.\nStand in rows, people\nAll of us, all of us.\nSeek after knowledge\nAnd love of others everybody\nBe really virtuous And stay united.\nAll of us, all of us.\n\nAll of us, all of us\nHi aue hei",
         "thumbnailPath": "assets/images/waiata/WaiataIndex3.jpg",
         "vocalPath": "assets/videos/vocal/Tutira_Mai_Nga_Iwi_Vocal.mp4",
-        "nonVocalPath": "assets/videos/video2.mp4"
+        "nonVocalPath": "assets/videos/nonVocal/Tutira_Mai_Nga_Iwi_Karaoke.mp4"
     },
     {
         "name": "Pupuke Te Hihiri",
@@ -42,16 +42,16 @@
         "englishWords": "Ascend Son, Daughter\nTo the pinnacle of Wintec\nHold fast to quality principles\nThat reflect your successes\nAscend Son, Daughter\nTo the pinnacle of Wintec\nHold fast to quality principles\nThat reflect your successes.\n\nFrom conception the increase\nFrom increase the thought\nFrom thought the knowledge out of Chaos\nFrom conception the increase\nFrom increase the\nthought From thought the knowledge out of Chaos.\n\nFrom the baskets of knowledge Tāwhaki retrieved\nComes spirit, life-force, power, language,\nUnderstanding and knowledge\nThe isthmus of culture.\n\nFrom conception the increase\nFrom increase the thought\nFrom thought the knowledge out of Chaos\nFrom conception the increase\nFrom increase the thought\nFrom thought the knowledge out of Chaos",
         "thumbnailPath": "assets/images/waiata/WaiataIndex4.jpg",
         "vocalPath": "assets/videos/vocal/Pupuke_Te_Hihiri_Vocal.mp4",
-        "nonVocalPath": "assets/videos/video2.mp4"
+        "nonVocalPath": "assets/videos/nonVocal/Pupuke_Te_Hihiri_Karaoke.mp4"
     },
     {
         "name": "I Te Whare Whakapiri",
         "brief": "This waiata was written by past Wintec students who came to Wintec to learn Te Reo Māori.\n\nThe song exposes the effects colonization has had on their lives and encourage Wintec to be a pillar by which they and others following can restore what was lost.\n\nIn this instance, it is the language which is the doorway to their cultural inheritance and wellbeing.",
-        "maoriWords": "I te whare whakapiri a Tāne\nRoto te Kuratini o Waikato\nKa puta ngā mamaetanga\nRere iho ko ngā roimata\nAuē, te arohanui.\n\nHomai, homai taku Māoritanga\nWhāngaihia mai tōku reo tuku iho\nHe kaiwhakaoho i tōku wairua.\n\nKua ngaro te korekore\nPuāwai ana ko ahau\nHe Māori tū tangata",
-        "englishWords": "In this cultural house\nThat is within Waikato Institute of Technology\nWe feel the sorrow\nThe tears\nThe flow\nAnd the love.\n\nGive back our cultural inheritance\nNurture the development of my language\nThat awakens my spirit.\n\nThe nothingness has disappeared\nI begin to bloom\nI am Māori",
+        "maoriWords": "He Māori, tū tangata\n\nI te whare whakapiri a Tāne\nRoto te Kuratini o Waikato\nKa puta ngā mamaetanga\nRere iho ko ngā roimata\nAuē, te arohanui.\n\nHomai, homai taku Māoritanga\nWhāngaihia mai tōku reo tuku iho\nHe kaiwhakaoho i tōku wairua.\n\nKua ngaro te korekore\nPuāwai ana ko ahau\n\nHe Māori tū tangata",
+        "englishWords": "I am Māori\n\nIn this cultural house\nThat is within Waikato Institute of Technology\nWe feel the sorrow\nThe tears, The flow\nAnd the love.\n\nGive back our cultural inheritance\nNurture the development of my language\nThat awakens my spirit.\n\nThe nothingness has disappeared\nI begin to bloom\nI am Māori",
         "thumbnailPath": "assets/images/waiata/WaiataIndex5.jpg",
         "vocalPath": "assets/videos/vocal/I_Te_Whare_Whakapiri_Vocal.mp4",
-        "nonVocalPath": "assets/videos/video2.mp4"
+        "nonVocalPath": "assets/videos/nonVocal/I_Te_Whare_Whakapiri_Karaoke.mp4"
     },
     {
         "name": "Pua Te Kōwhai",
@@ -60,6 +60,6 @@
         "englishWords": "The kōwhai blooms\nBursts open in readiness for plucking\nA sign of Spring\nThe Tui begin to assemble\nTo nibble to gather\nFor life and well-being\nThe stain of the kōwhai touches\nWhile Tui get drunk on the nectar of God\nFlittering away, returning\nA display of yellow\nAs the sun shines",
         "thumbnailPath": "assets/images/waiata/WaiataIndex6.jpg",
         "vocalPath": "assets/videos/vocal/Pua_Te_Kowhai_Vocal.mp4",
-        "nonVocalPath": "assets/videos/video2.mp4"
+        "nonVocalPath": "assets/videos/nonVocal/Pua_Te_Kowhai_Karaoke.mp4"
     }
 ]

@@ -51,7 +51,7 @@ class WaiataBrief extends StatelessWidget {
               child: Text(
                 WaiataAux.waiata.brief,
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 16.0,
                 ),
               ),
             ),
