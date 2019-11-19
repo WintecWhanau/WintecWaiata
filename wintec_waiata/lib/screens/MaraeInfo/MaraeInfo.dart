@@ -26,11 +26,11 @@ class MaraeInfo extends StatelessWidget {
               //for better experience for different screen size
               height: MediaQuery.of(context).size.height * 0.3,
               child: Carousel(
-                images: [//changed images from network to asset
-                  AssetImage(
-                      'assets/images/image2.jpg'),
-                  AssetImage(
-                      'assets/images/image2.jpg'),
+                images: [
+                  //changed images from network to asset
+                  AssetImage(InfoString.infoImg),
+                  AssetImage(InfoString.infoImg1),
+                  AssetImage(InfoString.infoImg2),
                 ],
                 indicatorBgPadding: 5.0,
               ),
