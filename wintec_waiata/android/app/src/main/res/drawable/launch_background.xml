@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Modify this file to customize your launch splash screen -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@android:color/black" />
-<!--    <item>-->
-<!--        <bitmap-->
-<!--            android:src="@mipmap/splash"-->
-<!--            android:gravity="center" />-->
-<!--    </item>-->
+    <item android:drawable="@android:color/darker_gray" />
+    <item>
+        <!-- different sized mipmap images added for a better experience with differing screen sizes -->
+        <bitmap
+            android:src="@mipmap/back"/>
+    </item>
 </layer-list>

@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.forward();
 
     Timer(
-      Duration(milliseconds: 4000),
+      Duration(milliseconds: 3000),
           () {
         Navigator.of(context).pushReplacementNamed('/home');
       },
@@ -41,34 +41,29 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
+      body: Container( // Wintec logo as foreground image
+        foregroundDecoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/splash.gif"),
+            image: AssetImage("assets/images/logoonly.png")
+          )
+        ),
+        decoration: BoxDecoration( // Background image with no logo
+          image: DecorationImage(
+            image: AssetImage("assets/images/NoLogo.jpg"),
             fit: BoxFit.cover,
           )
         ),
+        child: Center(  // Indicator to show loading progress
+          child: SizedBox(
+            height: 150.0,
+            width: 150.0,
+            child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
+              strokeWidth: 7.0,
+           )
+          ),
+        )
       )
     );
   }
-
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      body: Container(
-//        color: Colors.amber,
-//        child: FadeTransition(
-//            opacity: _animation,
-//            child: Container(
-//              foregroundDecoration: BoxDecoration(
-//                  image: DecorationImage(
-//                    image: AssetImage("assets/images/splashstill.png"),
-//                  )
-//              ),
-//            )
-//        ),
-//      ),
-//    );
-//  }
-
 }
