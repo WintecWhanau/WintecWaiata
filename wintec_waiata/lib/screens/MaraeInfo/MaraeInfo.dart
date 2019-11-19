@@ -30,8 +30,8 @@ class MaraeInfo extends StatelessWidget {
                 child: Carousel(
                   images: [
                     //changed images from network to asset
-                    AssetImage(InfoString.infoImg),
                     AssetImage(InfoString.infoImg1),
+                    AssetImage(InfoString.infoImg),
                     AssetImage(InfoString.infoImg2),
                   ],
                   indicatorBgPadding: 5.0,
