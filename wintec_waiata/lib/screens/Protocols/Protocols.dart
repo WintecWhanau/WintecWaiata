@@ -21,13 +21,16 @@ class Protocols extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            SizedBox(
-              //for better experience for different screen size
-              height: MediaQuery.of(context).size.height * 0.3,
-              width: MediaQuery.of(context).size.width,
-              child: Image(
-                fit: BoxFit.fill,
-                image: AssetImage(InfoString.protocolImage),
+            Hero(
+              tag: 'protocols',
+              child: SizedBox(
+                //for better experience for different screen size
+                height: MediaQuery.of(context).size.height * 0.35,
+                width: MediaQuery.of(context).size.width,
+                child: Image(
+                  fit: BoxFit.fill,
+                  image: AssetImage(InfoString.protocolImage),
+                ),
               ),
             ),
             Container(
