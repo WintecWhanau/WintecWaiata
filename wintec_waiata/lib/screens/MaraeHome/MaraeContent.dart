@@ -122,7 +122,7 @@ class MaraeContent extends StatelessWidget {
   //then authenticate user with a submit button. returning a bool back to checkButton
   Future < bool > authenticateBooking(context) {
 
-    String password = "password";
+    String password = "tmok1";
     TextEditingController _controller = TextEditingController();
 
     return showDialog(
@@ -137,6 +137,7 @@ class MaraeContent extends StatelessWidget {
               child: Column(
                 children: < Widget > [
                   TextField(
+                    obscureText: true, //hide text
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock),
                       labelText: 'Password',
