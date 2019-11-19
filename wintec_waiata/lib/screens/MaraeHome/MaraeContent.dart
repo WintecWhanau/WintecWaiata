@@ -29,9 +29,12 @@ class MaraeContent extends StatelessWidget {
                   topLeft: Radius.circular(8.0),
                   topRight: Radius.circular(8.0),
                 ),
-                child: Image(
-                  fit: BoxFit.fill,
-                  image: AssetImage(image),
+                child: SizedBox( // fill entire card width
+                  width: (MediaQuery.of(context).size.width - 20) / 2, //half screen minus padding
+                  child: Image(
+                    fit: BoxFit.fill,
+                    image: AssetImage(image),
+                  ),
                 ),
               ),
             ),
