@@ -12,11 +12,11 @@ import 'package:wintec_waiata/screens/WaiataPlayback/WaiataPlayback.dart';
 import 'package:wintec_waiata/screens/WaiataWords/WaiataWords.dart';
 
 void main() {
-  //fix the screen orientation
-  runApp(MyApp());
-  SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-  );
+  //wait until setPreferredOrientations is done and then start the app
+ SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+    .then((_) {
+      runApp(new MyApp());
+    });
 }
 
 /// This Widget is the main application widget.
