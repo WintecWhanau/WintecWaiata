@@ -22,17 +22,20 @@ class MaraeInfo extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            SizedBox(
-              //for better experience for different screen size
-              height: MediaQuery.of(context).size.height * 0.3,
-              child: Carousel(
-                images: [
-                  //changed images from network to asset
-                  AssetImage(InfoString.infoImg),
-                  AssetImage(InfoString.infoImg1),
-                  AssetImage(InfoString.infoImg2),
-                ],
-                indicatorBgPadding: 5.0,
+            Hero(
+              tag: 'info',
+              child: SizedBox(
+                //for better experience for different screen size
+                height: MediaQuery.of(context).size.height * 0.35,
+                child: Carousel(
+                  images: [
+                    //changed images from network to asset
+                    AssetImage(InfoString.infoImg1),
+                    AssetImage(InfoString.infoImg),
+                    AssetImage(InfoString.infoImg2),
+                  ],
+                  indicatorBgPadding: 5.0,
+                ),
               ),
             ),
             Container(
