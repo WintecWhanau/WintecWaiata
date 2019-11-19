@@ -3,11 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:wintec_waiata/screens/MaraeInfo/MoreInfoButton.dart';
 
 class CarvingCard extends StatelessWidget {
+  final String title;
   final String info;
   final String image;
-  final String title;
 
-  CarvingCard(this.info, this.image, this.title);
+  CarvingCard(
+    this.title,
+    this.info,
+    this.image,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +23,11 @@ class CarvingCard extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 200,
-                child: Image.asset(image),
+                child: Image(
+                  image: AssetImage(image),
+                  fit: BoxFit.fill,
+                  width: MediaQuery.of(context).size.width,
+                ),
               ),
               ExpandablePanel(
                 tapHeaderToExpand: true,
@@ -30,7 +37,8 @@ class CarvingCard extends StatelessWidget {
                   padding: EdgeInsets.all(15),
                   child: Text(
                     title,
-                    style: Theme.of(context).textTheme.body2,
+                    style:
+                        TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                   ),
                 ),
                 collapsed: Padding(
