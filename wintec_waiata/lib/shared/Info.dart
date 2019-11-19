@@ -85,7 +85,7 @@ class InfoString {
       'The entrance designs welcome people from around the world of Wintec.\n'
       'The sub-tribes (hapū) of this area are shown welcoming visitors onto the marae in a central carving at the entrance.'
       'Mātauranga Māori and part of the creation story of Tainui are also represented in the carvings.';
-  static final String gateImage = 'assets/images/gate1.jpg';
+  static final String gateImage = 'assets/images/gate.jpg';
 
   static final String doorwayLintels = 'Pare and Whakawae';
   static final String doorwayLintelsDesc =

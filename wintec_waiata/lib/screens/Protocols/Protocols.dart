@@ -35,7 +35,7 @@ class Protocols extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10),
+              padding: EdgeInsets.only(left: 20),
               child: Text(
                 InfoString.protocolTitle,
                 style: TextStyle(
@@ -47,7 +47,7 @@ class Protocols extends StatelessWidget {
             ),
             Container(
               //alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10),
+              padding: EdgeInsets.only(left: 20),
               child: Text(
                 InfoString.protocols,
                 textAlign: TextAlign.left,
@@ -57,7 +57,7 @@ class Protocols extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10, top: 10),
+              padding: EdgeInsets.only(left: 20, top: 10),
               child: Text(
                 'Wharenui - Te Kākano a te Kaahu',
                 textAlign: TextAlign.left,
@@ -70,7 +70,7 @@ class Protocols extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10, top: 10),
+              padding: EdgeInsets.only(left: 20, top: 10),
               child: Text(
                 InfoString.wharenui,
                 textAlign: TextAlign.left,
@@ -83,7 +83,7 @@ class Protocols extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10, top: 10),
+              padding: EdgeInsets.only(left: 20, top: 10),
               child: Text(
                 'Wharekai',
                 textAlign: TextAlign.left,
@@ -96,7 +96,7 @@ class Protocols extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10, top: 10),
+              padding: EdgeInsets.only(left: 20, top: 10),
               child: Text(
                 InfoString.wharekai,
                 textAlign: TextAlign.left,
