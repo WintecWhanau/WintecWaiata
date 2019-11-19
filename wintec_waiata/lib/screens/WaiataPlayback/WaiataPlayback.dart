@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
 import 'package:chewie/chewie.dart';
 import 'package:wintec_waiata/shared/ApplicationBar.dart';
@@ -40,6 +41,7 @@ class _WaiataPlaybackState extends State<WaiataPlayback> {
       autoPlay: true,
       looping: false,
       allowedScreenSleep: false,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
     );
     super.initState();
   }
