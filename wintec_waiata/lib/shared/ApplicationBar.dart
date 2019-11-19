@@ -19,7 +19,7 @@ class ApplicationBar extends AppBar {
             // print("Home"); //debugging
           }
           else if(value.compareTo("About us") == 0){
-            Navigator.of(context).pushNamed('/protocols'); //temp route until about us is implemented
+            Navigator.of(context).pushNamed('/aboutUs'); //temp route until about us is implemented
             // print("About us"); //debugging
           }
           else{
