@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:wintec_waiata/screens/AboutUs/AboutUs.dart';
 import 'package:wintec_waiata/screens/Booking/Booking.dart';
-import 'package:wintec_waiata/screens/Carvings/carvings.dart';
+import 'package:wintec_waiata/screens/Carvings/Carvings.dart';
 import 'package:wintec_waiata/screens/Home/Home.dart';
 import 'package:wintec_waiata/screens/MaraeInfo/MaraeInfo.dart';
 import 'package:wintec_waiata/screens/Protocols/Protocols.dart';
@@ -12,10 +13,10 @@ import 'package:wintec_waiata/screens/WaiataWords/WaiataWords.dart';
 
 void main() {
   //fix the screen orientation
+  runApp(MyApp());
   SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
   );
-  runApp(MyApp());
 }
 
 /// This Widget is the main application widget.
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
         '/maraeInfo': (context) => MaraeInfo(),
         '/protocols': (context) => Protocols(),
         '/booking': (context) => Booking(),
-        '/carvings': (context) => Carvings()
+        '/carvings': (context) => Carvings(),
+        '/aboutUs': (context) => AboutUs()
       },
     );
   }
