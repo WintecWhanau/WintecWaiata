@@ -68,7 +68,7 @@ class CarvingCard extends StatelessWidget {
                     Column(
                       children: <Widget>[
                         MoreInfoButton('Learn More',
-                            'https://www.wintec.ac.nz/about-wintec/m%C4%81ori-and-pasifika/wintec-marae')
+                            'https://www.wintec.ac.nz/about-wintec/m%C4%81ori-and-pasifika/wintec-marae/marae-carvings')
                       ],
                     ),
                   ],
