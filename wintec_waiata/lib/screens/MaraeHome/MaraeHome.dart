@@ -9,10 +9,10 @@ class MaraeHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    //sizing cards
-    var size = MediaQuery.of(context).size;
-    final double itemHeight = (size.height - kToolbarHeight - 85) / 2;
-    final double itemWidth = size.width / 2;
+    //sizing cards based off screen size
+    // var size = MediaQuery.of(context).size;
+    // final double itemHeight = (size.height - kToolbarHeight - 85) / 2;
+    // final double itemWidth = size.width / 2;
 
     //main render
     return Scaffold(
@@ -27,7 +27,7 @@ class MaraeHome extends StatelessWidget {
       ),
       body: GridView.count(
               crossAxisCount: 2, //2 collumns
-              childAspectRatio: (itemWidth / itemHeight),
+              childAspectRatio: 200 / 300, //(itemWidth / itemHeight), //based off screen size
               children: <Widget>[
                 MaraeContent(
                   "Marae info", 

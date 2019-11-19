@@ -9,7 +9,7 @@ class InfoString {
 
   static final String aboutUsTitle = 'Wintec Waiata App';
 
-  static final String protocolImage = 'assets/images/image2.jpg';
+  static final String protocolImage = 'assets/images/protocolWide.jpg';
 
   static final String wintecLogo = 'assets/images/Logo.jpg';
 
