@@ -22,15 +22,17 @@ class MaraeContent extends StatelessWidget {
       child: InkWell(
         onTap: () => checkButton(context),
         child: Column(
-          children: < Widget > [
+          children: <Widget>[
             Expanded(
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8.0),
                   topRight: Radius.circular(8.0),
                 ),
-                child: SizedBox( // fill entire card width
-                  width: (MediaQuery.of(context).size.width - 20) / 2, //half screen minus padding
+                child: SizedBox(
+                  // fill entire card width
+                  width: (MediaQuery.of(context).size.width - 20) /
+                      2, //half screen minus padding
                   child: Image(
                     fit: BoxFit.fill,
                     image: AssetImage(image),
@@ -42,7 +44,7 @@ class MaraeContent extends StatelessWidget {
               // color: Colors.black,
               child: Row(
                 //used to expand song name across entire bottom of card
-                children: < Widget > [
+                children: <Widget>[
                   Expanded(
                     child: FlatButton(
                       //only used a flat button for the styling
@@ -51,9 +53,7 @@ class MaraeContent extends StatelessWidget {
                       child: Text(
                         title,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white
-                        ),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   )
@@ -68,32 +68,36 @@ class MaraeContent extends StatelessWidget {
 
   //check if booking button was pressed. Take value from authenticateBooking() and either show incorrect or allow access to page
   checkButton(BuildContext context) {
-    if (page.compareTo('booking') == 0) { //booking has been selected
-      getAccess().then((onValue){ //conditional statements based on saved preference return
-        if(onValue == null || !onValue){
+    if (page.compareTo('booking') == 0) {
+      //booking has been selected
+      getAccess().then((onValue) {
+        //conditional statements based on saved preference return
+        if (onValue == null || !onValue) {
           initAuth(context);
-        }
-        else if(onValue){
+        } else if (onValue) {
           changeRoute(context);
         }
       });
-    } else {//booking not selected continue normally
+    } else {
+      //booking not selected continue normally
       changeRoute(context);
     }
   }
 
-  initAuth(BuildContext context){
+  initAuth(BuildContext context) {
     authenticateBooking(context).then((onValue) {
-      if(onValue == null){ //cancel button returns null
+      if (onValue == null) {
+        //cancel button returns null
         return;
       }
-      if (onValue) { //returned true allow access
+      if (onValue) {
+        //returned true allow access
         changeRoute(context);
-      } 
-      else { //returned false deny access and show SnackBar
+      } else {
+        //returned false deny access and show SnackBar
         SnackBar wrongPassword = SnackBar(
           content: Text("Incorrect password. Please try again."),
-          // duration: Duration(seconds: 2),
+          duration: Duration(milliseconds: 1500),
         );
         Scaffold.of(context).showSnackBar(wrongPassword);
       }
@@ -101,104 +105,98 @@ class MaraeContent extends StatelessWidget {
   }
 
   //check if user has already filled out authentication form correctly
-  Future<bool> getAccess() async{
+  Future<bool> getAccess() async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     bool allowed = preference.getBool('allowed');
     return allowed;
   }
 
   //set a shared preference. Used to determine if authentication window should show
-  setAccess() async{
+  setAccess() async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     preference.setBool('allowed', true);
   }
 
   //switch to desired page
-  changeRoute(BuildContext context){
+  changeRoute(BuildContext context) {
     Navigator.of(context).pushNamed('/$page');
   }
 
   //create a dialog for user to enter provided password
   //then authenticate user with a submit button. returning a bool back to checkButton
-  Future < bool > authenticateBooking(context) {
-
-    String password = "tmok1";
+  Future<bool> authenticateBooking(context) {
+    String password = "tkmok1";
     TextEditingController _controller = TextEditingController();
 
     return showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text("Enter password"),
-          elevation: 20,
-          content: Container(
-            // height: MediaQuery.of(context).size.height * 0.25,
-            child: SingleChildScrollView(
-              child: Column(
-                children: < Widget > [
-                  TextField(
-                    obscureText: true, //hide text
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
-                      labelText: 'Password',
-                      // hintText: "Password",
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text("Enter password"),
+            elevation: 20,
+            content: Container(
+              // height: MediaQuery.of(context).size.height * 0.25,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      obscureText: true, //hide text
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock),
+                        labelText: 'Password',
+                        // hintText: "Password",
+                      ),
+                      controller: _controller,
                     ),
-                    controller: _controller,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Text(
-                      "Only Wintec staff can make official bookings and will be provided with an authentication key.",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Container(
-                      alignment: Alignment.centerLeft,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
                       child: Text(
-                        "Please contact marae staff for more information.",
-                        style: TextStyle(fontSize: 9),
+                        "Only Wintec staff can make official bookings and will be provided with an authentication key.",
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          actions: < Widget > [
-            MaterialButton(
-              elevation: 5,
-              child: Text(
-                "Submit",
-                style: TextStyle(
-                  color: Colors.black
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Please contact marae staff for more information.",
+                          style: TextStyle(fontSize: 9),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
-              onPressed: () {
-                if (_controller.text.toString().compareTo(password) == 0) {
-                  setAccess();
-                  Navigator.of(context).pop(true);
-                } else {
-                  Navigator.of(context).pop(false);
-                }
-              },
             ),
-            MaterialButton(
-              elevation: 5,
-              child: Text(
-                "Cancel",
-                style: TextStyle(
-                  color: Colors.black
+            actions: <Widget>[
+              MaterialButton(
+                elevation: 5,
+                child: Text(
+                  "Submit",
+                  style: TextStyle(color: Colors.black),
                 ),
+                onPressed: () {
+                  if (_controller.text.toString().compareTo(password) == 0) {
+                    setAccess();
+                    Navigator.of(context).pop(true);
+                  } else {
+                    Navigator.of(context).pop(false);
+                  }
+                },
               ),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            )
-          ],
-        );
-      }
-    );
+              MaterialButton(
+                elevation: 5,
+                child: Text(
+                  "Cancel",
+                  style: TextStyle(color: Colors.black),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        });
   }
 }

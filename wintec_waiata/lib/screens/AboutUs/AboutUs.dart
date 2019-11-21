@@ -20,8 +20,8 @@ class AboutUs extends StatelessWidget {
           children: <Widget>[
             SizedBox(
               //for better experience for different screen size
-              height: MediaQuery.of(context).size.height * 0.3,
-              child: Image.asset(InfoString.wintecLogo),
+              height: MediaQuery.of(context).size.height * 0.35,
+              child: Image.asset(InfoString.group),
             ),
             Container(
               alignment: Alignment.centerLeft,
@@ -102,11 +102,11 @@ class AboutUs extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 20),
             ),
-            SizedBox(
+            /*SizedBox(
               //for better experience for different screen size
               height: MediaQuery.of(context).size.height * 0.3,
               child: Image.asset(InfoString.wintecLogo),
-            ),
+            ),*/
           ],
         ),
       ),
