@@ -11,7 +11,7 @@ class InfoString {
 
   static final String protocolImage = 'assets/images/protocolWide.jpg';
 
-  static final String wintecLogo = 'assets/images/Logo.jpg';
+  static final String group = 'assets/images/group.jpg';
 
   static final String protocols =
       'Te Kōpū Mānia o Kirikiriroa is a functional, modern marae complex set up to accommodate a variety of uses.\n'
