@@ -17,23 +17,23 @@ class InfoString {
       'Te Kōpū Mānia o Kirikiriroa is a functional, modern marae complex set up to accommodate a variety of uses.\n'
       'Although our marae is contemporary, we still have protocols and tikanga (customs and traditions) to adhere to.';
   static final String wharenui =
-      '• Remove footwear before entering the wharenui\n'
-      '• Drinks and food not to be consumed in wharenui\n'
+      '• Please remove footwear before entering the wharenui\n'
+      '• Please do not consume food or drinks in the wharenui\n'
       '• Health and Safety allows for water bottles\n'
-      '• Do not sit on pillows or stand on mattresses\n'
+      '• Please do not sit on pillows or stand on mattresses\n'
       '• Please do not leave hats, hair brushes or combs on table tops\n'
-      '• Refrain from hanging items on carvings';
+      '• Please do not items on carvings';
   static final String wharekai = '• Karakia (grace) is said before every meal\n'
-      '• Never sit on tables\n'
+      '• Please do no sit on the tables\n'
       '• Seats are provided for your convenience\n'
-      '• Do not brush your hair in the wharekai\n'
+      '• Please do not brush your hair in the wharekai\n'
       '• Please do not leave hats, hair brushes or combs on table tops\n'
-      '• Wear appropriate clothing, no pyjamas allowed\n'
-      '• Keep the dining and kitchen areas clean and tidy\n'
-      '• Wipe down tables and benches after every meal\n'
-      '• Do not wipe seats with cloths used for table tops\n'
-      '• Do not stack chairs on table tops\n'
-      '• Use dishes provided rather than disposable items\n';
+      '• Please wear appropriate clothing, no pyjamas permitted\n'
+      '• Please keep the dining and kitchen areas clean and tidy at all times\n'
+      '• Please wipe down tables and benches after every meal\n'
+      '• Please do not wipe seats with cloths used for table tops\n'
+      '• Please do not stack chairs on table tops\n'
+      '• Please use dishes provided rather than disposable items\n';
 
   static final String appDescription =
       'The Wintec Waiata App is a mobile app that helps people learn Wintec songs and Wintec Marae.';
