@@ -1,6 +1,8 @@
 //TODO
 //this is a place holder for splash screen
 import 'dart:async';
+import 'dart:io';
+import 'dart:ui' as prefix0;
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
