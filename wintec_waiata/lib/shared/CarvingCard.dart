@@ -30,9 +30,11 @@ class CarvingCard extends StatelessWidget {
                 ),
               ),
               ExpandablePanel(
-                tapHeaderToExpand: true,
-                tapBodyToCollapse: true,
-                headerAlignment: ExpandablePanelHeaderAlignment.center,
+                theme: ExpandableThemeData(
+                  tapHeaderToExpand: true,
+                  tapBodyToCollapse: true,
+                  headerAlignment: ExpandablePanelHeaderAlignment.center,
+                ),
                 header: Padding(
                   padding: EdgeInsets.all(15),
                   child: Text(
