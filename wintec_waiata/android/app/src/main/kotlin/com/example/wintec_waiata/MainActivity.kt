@@ -1,4 +1,4 @@
-package com.example.wintec_waiata
+package com.wintec.wintec_waiata
 
 import android.os.Bundle
 
